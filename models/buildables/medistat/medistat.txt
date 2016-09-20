@@ -1,0 +1,18 @@
+======================================Unvanquished Medistat==============*
+Date: 22.12.2015 (DD:MM:YYYY)
+Format: iqm
+Tris: 1378
+
+Textures: Diffuse,Normal,Specular-Gloss,Glow
+Size: 1024px
+
+Animations: construct,construct2,idle,idle2,powerdown,attack,destroy,destroyed
+
+
+Author: chris807 contact: cgart.chris807[at]gmail.com | www.chris807.com
+License: model and textures licensed under CC BY-NC-SA 4.0
+
+Note: This information has to be included if you redistribute theses assets.
+Place this file near the assets or append this text to your own 
+license/readme file. Thanks.
+========================================================================*
