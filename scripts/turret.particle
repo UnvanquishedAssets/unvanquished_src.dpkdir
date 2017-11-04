@@ -50,7 +50,7 @@ MuzzleFlashTurret
 	{
 		particle
 		{
-			model models/weapons/shells/rifle-shell.md3
+			model models/shells/rifle/shell.md3
 
 			displacement -8 -45 -2 0
 
