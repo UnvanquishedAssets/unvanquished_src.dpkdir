@@ -1,33 +1,33 @@
-models/buildables/drill/drill_dead
-{
-	diffuseMap  models/buildables/drill/drill_d
-	normalMap   models/buildables/drill/drill_n
-	specularMap models/buildables/drill/drill_s
-}
-
 models/buildables/drill/drill
 {
-	diffuseMap  models/buildables/drill/drill_d
-	normalMap   models/buildables/drill/drill_n
-	specularMap models/buildables/drill/drill_s
+	diffuseMap models/buildables/drill/drill_d
+	normalMap models/buildables/drill/drill_n
 	{
-		map models/buildables/drill/drill_a
-		blend add
-		rgbGen wave inversesawtooth 0.3 0.8 0.0 0.5
+		stage specularMap
+		map models/buildables/drill/drill_s
+	}
+	// white lamp on top
+	{
+		map models/buildables/drill/drill_g2
+		blendfunc add
+		rgbGen    wave sin 1.0 0.85 0.5 0.08
+	}
+	// small yellow lamps
+	{
+		map models/buildables/drill/drill_g1
+		blendfunc add
+		rgb       0.85 0.85 0.85
 	}
 
-	when unpowered models/buildables/drill/drill_dead
 	when destroyed models/buildables/drill/drill_dead
 }
 
-// Used for the glowing effect of the low poly drill model
-// The low poly drill steals its body shader from the low poly repeater (lazy, lazy Ishq!)
-models/buildables/drill/energy
+models/buildables/drill/drill_dead
 {
+	diffuseMap models/buildables/drill/drill_d
+	normalMap models/buildables/drill/drill_n
 	{
-		map models/buildables/drill/energy.jpg
-		rgbGen wave sawtooth 0.3 1 0 0.5
-		tcMod scale 2 1
-		tcMod scroll 0 1
+		stage specularMap
+		map models/buildables/drill/drill_s
 	}
 }
