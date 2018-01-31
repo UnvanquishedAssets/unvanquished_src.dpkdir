@@ -1,24 +1,13 @@
-models/buildables/acid_tube/acidtube
+models/buildables/acid_tube/acid_tube
 {
-	qer_editorimage models/buildables/acid_tube/acidtube
+	qer_editorimage models/buildables/acid_tube/acid_tube_d
 	{
 		blend diffusemap
-		map models/buildables/acid_tube/acidtube
+		map models/buildables/acid_tube/acid_tube_d
 		alphaFunc GE128
 	}
-	normalMap models/buildables/acid_tube/acidtube_n
-	specularMap models/buildables/acid_tube/acidtube_s
-	glowMap models/buildables/acid_tube/acidtube_g
+	normalMap models/buildables/acid_tube/acid_tube_n
+	specularMap models/buildables/acid_tube/acid_tube_s
+	glowMap models/buildables/acid_tube/acid_tube_g
 	cull none
 }
-
-models/buildables/acid_tube/pod_strands
-{
-	cull disable
-	{
-		map models/buildables/eggpod/pod_strands
-		rgbGen lightingDiffuse
-		alphaFunc GE128
-	}
-}
-

@@ -1,5 +1,6 @@
 models/buildables/medistat/medistat
 {
+	qer_editorimage models/buildables/medistat/medipad_lp_d
 	diffuseMap models/buildables/medistat/medipad_lp_d
     	normalMap models/buildables/medistat/medipad_lp_n
 	{
@@ -32,6 +33,7 @@ models/buildables/medistat/rings2
 }
 models/buildables/medistat/display
 {
+	qer_editorimage models/buildables/medistat/display1
 	{
 		AnimMap 0.8 models/buildables/medistat/display1 models/buildables/medistat/display2 models/buildables/medistat/display3 models/buildables/medistat/display4 models/buildables/medistat/display5 models/buildables/medistat/display6 models/buildables/medistat/display7 models/buildables/medistat/display8
 		blendfunc add

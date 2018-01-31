@@ -5,25 +5,27 @@ models/buildables/telenode/telenode_dead
 	specularMap	models/buildables/telenode/telenode_spec
 }
 
-models/buildables/telenode/telenode_full
+models/buildables/telenode/telenode
 {
+	qer_editorimage models/buildables/telenode/telenode_d
 	diffuseMap	models/buildables/telenode/telenode_d
 	normalMap	models/buildables/telenode/telenode_n
-	specularMap	models/buildables/telenode/telenode_spec
-	glowMap		models/buildables/telenode/telenode_glow
+	specularMap	models/buildables/telenode/telenode_s
+	glowMap		models/buildables/telenode/telenode_g
 
 	when unpowered models/buildables/telenode/telenode_dead
 	when destroyed models/buildables/telenode/telenode_dead
 }
 
-models/buildables/telenode/telenode-effect
+models/buildables/telenode/effect
 {
+	qer_editorimage models/buildables/telenode/effect
 	cull none
 
 	surfaceparm nolightmap
 
 	{
-		map   models/buildables/telenode/telenode-effect
+		map   models/buildables/telenode/effect
 		blend blend
 
 		tcMod scroll -1.0 0

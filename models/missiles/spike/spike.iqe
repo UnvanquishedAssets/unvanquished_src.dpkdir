@@ -5,7 +5,7 @@ vertexarray texcoord float 2
 vertexarray normal float 3
 vertexarray tangent float 4
 
-mesh "Object030"
+mesh "spike"
 material "models/buildables/spiker/spiker"
 vp 0.0362849906 1.04904616 -0.211007163
 vn -0.611360133 0.771677613 -0.175363794

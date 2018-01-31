@@ -1,0 +1,16 @@
+acid_tube
+arm
+barricade
+booster
+drill
+eggpod
+hive
+leech
+medistat
+mgturret
+overmind
+reactor
+rocketpod
+spiker
+telenode
+trapper
