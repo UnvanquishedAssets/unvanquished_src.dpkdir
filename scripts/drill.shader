@@ -3,19 +3,16 @@ models/buildables/drill/drill
 	qer_editorimage models/buildables/drill/drill_d
 	diffuseMap models/buildables/drill/drill_d
 	normalMap models/buildables/drill/drill_n
-	{
-		stage specularMap
-		map models/buildables/drill/drill_s
-	}
+	specularMap models/buildables/drill/drill_s
 	// white lamp on top
 	{
-		map models/buildables/drill/drill_g2
+		map models/buildables/drill/drill_top_g
 		blendfunc add
 		rgbGen    wave sin 1.0 0.85 0.5 0.08
 	}
-	// small yellow lamps
+	// small yellow lamps around
 	{
-		map models/buildables/drill/drill_g1
+		map models/buildables/drill/drill_around_g
 		blendfunc add
 		rgb       0.85 0.85 0.85
 	}
