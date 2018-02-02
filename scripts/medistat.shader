@@ -1,17 +1,17 @@
 models/buildables/medistat/medistat
 {
-	qer_editorimage models/buildables/medistat/medipad_lp_d
-	diffuseMap models/buildables/medistat/medipad_lp_d
-    	normalMap models/buildables/medistat/medipad_lp_n
+	qer_editorimage models/buildables/medistat/medistat_d
+	diffuseMap models/buildables/medistat/medistat_d
+    	normalMap models/buildables/medistat/medistat_n
 	{
 		stage specularMap
-		map models/buildables/medistat/medipad_lp_s
+		map models/buildables/medistat/medistat_s
 		specularExponentMin 10
 		specularExponentMax 25
 
 	}
 	{
-		map models/buildables/medistat/medipad_lp_e
+		map models/buildables/medistat/medistat_g
 		blendfunc add
 	}
 }
@@ -58,6 +58,7 @@ models/buildables/medistat/displayD
 
 models/buildables/medistat/rings
 {
+	qer_editorimage models/buildables/medistat/cross_p
 	{
 		map models/buildables/medistat/noise
 		tcMod scale 5 5
