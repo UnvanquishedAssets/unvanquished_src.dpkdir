@@ -71,7 +71,7 @@ vertexarray tangent float 4
 vertexarray blendindexes ubyte 4
 vertexarray blendweights ubyte 4
 
-mesh "mesh_plane1"
+mesh "plane1"
 material "models/buildables/medistat/scan"
 vp -44.9261551 6 35.9861565
 vn 0 -1 4.70745887e-09
@@ -166,7 +166,7 @@ fm 12 11 13
 fm 13 14 12
 fm 14 13 15
 
-mesh "mesh_plane2"
+mesh "plane2"
 material "models/buildables/medistat/scan"
 vp -44.9261551 6 35.9861565
 vn 0 -1 -9.41491773e-09
@@ -261,7 +261,7 @@ fm 12 11 13
 fm 13 14 12
 fm 14 13 15
 
-mesh "mesh_plane3"
+mesh "plane3"
 material "models/buildables/medistat/scan"
 vp -35.9861565 6 -44.9261589
 vn 0 1 3.29522116e-08
@@ -356,7 +356,7 @@ fm 12 11 13
 fm 13 14 12
 fm 14 13 15
 
-mesh "mesh_plane4"
+mesh "plane4"
 material "models/buildables/medistat/scan"
 vp -35.9861565 6 -44.9261589
 vn 0 1 -2.82447523e-08
@@ -451,7 +451,7 @@ fm 12 11 13
 fm 13 14 12
 fm 14 13 15
 
-mesh "mesh_plane5"
+mesh "plane5"
 material "models/buildables/medistat/scan"
 vp -44.9261551 6 35.9861565
 vn 0 -1 9.41491773e-09
@@ -546,7 +546,7 @@ fm 12 11 13
 fm 13 14 12
 fm 14 13 15
 
-mesh "mesh_plane6"
+mesh "plane6"
 material "models/buildables/medistat/scan"
 vp -44.9261551 6 35.9861565
 vn 0 -1 -1.88298355e-08
@@ -641,7 +641,7 @@ fm 12 11 13
 fm 13 14 12
 fm 14 13 15
 
-mesh "mesh_plane7"
+mesh "plane7"
 material "models/buildables/medistat/scan"
 vp -44.9261551 6 35.9861565
 vn 0 -1 -1.88298355e-08
@@ -736,7 +736,7 @@ fm 12 11 13
 fm 13 14 12
 fm 14 13 15
 
-mesh "mesh_foot1"
+mesh "foot1"
 material "models/buildables/medistat/medistat"
 vp 67.591301 0.0611543655 -37.5912971
 vn 0 -1 0
@@ -1527,7 +1527,7 @@ fm 124 130 128
 fm 130 131 128
 fm 131 127 128
 
-mesh "mesh_foot2"
+mesh "foot2"
 material "models/buildables/medistat/medistat"
 vp -37.5912971 0.0611543655 -67.591301
 vn 0 -1 1.62059935e-10
@@ -2318,7 +2318,7 @@ fm 130 124 129
 fm 131 130 129
 fm 127 131 129
 
-mesh "mesh_foot3"
+mesh "foot3"
 material "models/buildables/medistat/medistat"
 vp 56.5258484 0.0611543655 45.4281807
 vn 0 -1 0
@@ -3109,7 +3109,7 @@ fm 130 127 128
 fm 124 131 128
 fm 131 130 128
 
-mesh "mesh_foot4"
+mesh "foot4"
 material "models/buildables/medistat/medistat"
 vp -67.591301 0.0611543655 37.5912971
 vn 0 -1 0
@@ -3900,7 +3900,7 @@ fm 124 130 128
 fm 130 131 128
 fm 131 127 128
 
-mesh "mesh_medipad"
+mesh "medipad"
 material "models/buildables/medistat/medistat"
 vp -30.0000019 0.0611543655 48.786911
 vn -1 0 0
@@ -7365,7 +7365,7 @@ fm 537 552 541
 fm 548 552 553
 fm 552 537 553
 
-mesh "mesh_cross"
+mesh "cross"
 material "models/buildables/medistat/rings"
 vp -21.4500008 137.743896 -7.15000057
 vn 0 1 0
@@ -8176,7 +8176,7 @@ fm 135 141 133
 fm 141 142 133
 fm 142 141 143
 
-mesh "mesh_display"
+mesh "display"
 material "models/buildables/medistat/display"
 vp 11.5364475 7.35974026 -60.7694511
 vn 0 0.706988096 -0.707225442

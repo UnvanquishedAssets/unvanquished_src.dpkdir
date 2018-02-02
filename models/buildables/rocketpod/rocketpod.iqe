@@ -2354,7 +2354,7 @@ fm 382 384 378
 fm 380 378 384
 fm 384 383 380
 
-mesh "Object001"
+mesh "magazine"
 material "models/buildables/rocketpod/rocketpod"
 vp -6.26979065 -10.92735 35.1200333
 vn -0.00246188138 -0.99999696 1.4970162e-08

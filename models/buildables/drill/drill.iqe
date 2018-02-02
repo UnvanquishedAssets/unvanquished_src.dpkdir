@@ -13,7 +13,7 @@ vertexarray tangent float 4
 vertexarray blendindexes ubyte 4
 vertexarray blendweights ubyte 4
 
-mesh "repeater_base"
+mesh "drill"
 material "models/buildables/drill/drill"
 vp 11.2724543 -13.3829842 54.3107452
 vn -0.893559992 -0.448943824 -4.22498988e-06
@@ -21964,7 +21964,7 @@ fm 3554 3552 3553
 fm 3554 3553 3555
 fm 3550 3554 3555
 
-mesh "repeater_arm"
+mesh "arm"
 material "models/buildables/drill/drill"
 vp 20.9071636 2.41955543 32.3660889
 vn 0.232663527 0.972557306 1.28247947e-07

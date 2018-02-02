@@ -15,7 +15,7 @@ vertexarray tangent float 4
 vertexarray blendindexes ubyte 4
 vertexarray blendweights ubyte 4
 
-mesh "low_core003"
+mesh "core"
 material "models/buildables/reactor/reactor1"
 vp -6.16581869 -10.5672779 7.28747559
 vn 0.709582925 0.704615176 0.00308081345
@@ -17881,7 +17881,7 @@ fm 2766 2768 2767
 fm 2768 2766 2764
 fm 2768 2764 2765
 
-mesh "low_arm008"
+mesh "arm"
 material "models/buildables/reactor/reactor2"
 vp 4.58354092 17.5384808 36.888176
 vn 0.187225655 -0.046194274 -0.98123008

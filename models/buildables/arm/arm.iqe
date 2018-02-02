@@ -50194,7 +50194,7 @@ fm 8493 8491 8490
 fm 8493 8488 8491
 fm 8487 8488 8493
 
-mesh "arm_screen"
+mesh "screen"
 material "models/buildables/arm/screen"
 vp 19.1921387 15.6679516 45.9405823
 vn 0.497243196 0.85309267 -0.15805696
