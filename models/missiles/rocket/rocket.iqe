@@ -14,7 +14,7 @@ vertexarray blendindexes ubyte 4
 vertexarray blendweights ubyte 4
 
 mesh "rocket"
-material "models/buildables/rocketpod/rocket"
+material "models/missiles/rocket/rocket"
 vp 0.0994081497 0.612319946 2.25352907
 vn 0.660500288 0.166246101 0.732189655
 vx -0.111354969 0.986084282 -0.123441644 1
