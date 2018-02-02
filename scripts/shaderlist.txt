@@ -10,7 +10,6 @@ medistat
 mgturret
 overmind
 reactor
-rocket
 rocketpod
 spiker
 telenode
