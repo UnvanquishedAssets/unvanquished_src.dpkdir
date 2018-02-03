@@ -2,7 +2,7 @@ models/buildables/telenode/telenode_dead
 {
 	diffuseMap	models/buildables/telenode/telenode_d
 	normalMap	models/buildables/telenode/telenode_n
-	specularMap	models/buildables/telenode/telenode_spec
+	specularMap	models/buildables/telenode/telenode_s
 }
 
 models/buildables/telenode/telenode
