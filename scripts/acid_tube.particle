@@ -4,7 +4,7 @@ alienAcidTubePS
   {
     particle
     {
-      shader sync gfx/sprites/acid_3
+      shader sync gfx/sprites/acid_spore
 
       displacement 0 0 0 0
 

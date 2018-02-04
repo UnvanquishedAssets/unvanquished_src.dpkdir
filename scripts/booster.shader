@@ -51,7 +51,7 @@ gfx/sprites/booster_spore
 	cull none
 	entityMergable
 	{
-		map gfx/sprites/boosterspore
+		map gfx/sprites/booster_spore
 		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
 		rgbGen    vertex
 		alphaGen  vertex
