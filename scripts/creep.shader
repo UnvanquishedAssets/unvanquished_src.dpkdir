@@ -4,7 +4,7 @@ creep
 	polygonoffset
 	twoSided
 	{
-		clampmap gfx/creep/creep
+		clampmap gfx/creep/creep_d
 		blendfunc blend
 		blend diffusemap
 		rgbGen identity
