@@ -11,3 +11,16 @@ models/buildables/acid_tube/acid_tube
 	glowMap models/buildables/acid_tube/acid_tube_g
 	cull none
 }
+
+gfx/sprites/acid_3
+{
+	cull none
+	entityMergable
+	{
+		map gfx/sprites/acid_3
+		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
+		rgbGen    vertex
+		alphaGen  vertex
+		depthFade 100.0
+	}
+}

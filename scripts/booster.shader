@@ -45,3 +45,16 @@ models/buildables/booster/pod_strands
                 alphaFunc GE128
         }
 }
+
+gfx/sprites/booster_spore
+{
+	cull none
+	entityMergable
+	{
+		map gfx/sprites/boosterspore
+		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
+		rgbGen    vertex
+		alphaGen  vertex
+		depthFade 100.0
+	}
+}
