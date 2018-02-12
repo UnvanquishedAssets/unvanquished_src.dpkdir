@@ -4,7 +4,7 @@ humanBuildableDamagedPS
   {
     particle
     {
-      shader sync gfx/sprites/smoke
+      shader sync gfx/weapons/legacy_smoke
 
       displacement 0 0 8 ~0
 

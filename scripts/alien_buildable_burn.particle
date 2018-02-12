@@ -5,7 +5,7 @@ alienBuildableBurnPS
   {
     particle
     {
-      //shader sync gfx/sprites/smoke
+      //shader sync gfx/weapons/legacy_smoke
       shader sync gfx/weapons/flamersmoke
 
       displacement 0 0 8 ~0
