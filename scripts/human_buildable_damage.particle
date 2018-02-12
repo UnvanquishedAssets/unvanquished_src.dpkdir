@@ -35,7 +35,7 @@ humanBuildableDamagedPS
   {
     particle
     {
-      shader sync gfx/sprites/spark
+      shader sync gfx/weapons/legacy_spark
 
       displacement 0 0 11 ~0
 
@@ -98,7 +98,7 @@ humanBuildableDestroyedPS
   {
     particle
     {
-      shader sync gfx/sprites/spark
+      shader sync gfx/weapons/legacy_spark
 
       displacement 0 0 8 ~0
 
