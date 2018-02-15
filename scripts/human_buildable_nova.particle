@@ -6,7 +6,7 @@ humanBuildableNovaPS
   {
     particle
     {
-      shader sync flame3 flame4 flame5 flame6 flame7 flame8 flame9 flame10 flame11 flame12 flame13 flame14 flame15 flame16 flame17 flame18 flame19 flame20 flame21 flame22 flame23 flame24 flame25
+      shader sync gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
 
       displacement          0 0 11 ~10
 
@@ -68,7 +68,7 @@ humanBuildableNovaPS
   {
     particle
     {
-      shader sync gfx/weapons/luci_shockwave_haze
+      shader sync gfx/weapons/lcannon/shockwave_haze
 
       displacement 0 0 8 ~0
 
