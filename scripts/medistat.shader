@@ -2,19 +2,19 @@ models/buildables/medistat/medistat
 {
 	qer_editorimage models/buildables/medistat/medistat_d
 	diffuseMap models/buildables/medistat/medistat_d
-    	normalMap models/buildables/medistat/medistat_n
+	normalMap models/buildables/medistat/medistat_n
 	{
 		stage specularMap
 		map models/buildables/medistat/medistat_s
 		specularExponentMin 10
 		specularExponentMax 25
-
 	}
 	{
 		map models/buildables/medistat/medistat_g
 		blendfunc add
 	}
 }
+
 models/buildables/medistat/rings2
 {
 	{
@@ -31,6 +31,7 @@ models/buildables/medistat/rings2
 		rgbGen const ( 0 0.572549 0.690196 )
 	}
 }
+
 models/buildables/medistat/display
 {
 	qer_editorimage models/buildables/medistat/display1
@@ -41,6 +42,7 @@ models/buildables/medistat/display
 	when idle2 models/buildables/medistat/displayH
 	when destroyed models/buildables/medistat/displayD
 }
+
 models/buildables/medistat/displayH
 {
 	{
@@ -48,6 +50,7 @@ models/buildables/medistat/displayH
 		blendfunc add
 	}
 }
+
 models/buildables/medistat/displayD
 {
 	{
@@ -89,6 +92,7 @@ models/buildables/medistat/rings
 		rgbGen const ( 0 0.572549 0.690196 )
 	}
 }
+
 models/buildables/medistat/scan
 {
 	{

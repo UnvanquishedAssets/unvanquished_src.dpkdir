@@ -2,91 +2,91 @@
 
 humanBuildableNovaPS
 {
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
 
-      displacement          0 0 11 ~10
+			displacement          0 0 11 ~10
 
-      velocityType          normal
-      velocityDir           linear
-      velocityMagnitude     150~75%
-      velocity              0 0 1 ~25
+			velocityType          normal
+			velocityDir           linear
+			velocityMagnitude     150~75%
+			velocity              0 0 1 ~25
 
-      accelerationType      static
-      accelerationDir       linear
-      accelerationMagnitude 10
-      acceleration          0 0 -1 0
+			accelerationType      static
+			accelerationDir       linear
+			accelerationMagnitude 10
+			acceleration          0 0 -1 0
 
-      radius                0 50.0~25% 300.0~25%
-      alpha                 400 1.0 0.0
-      rotation              0 ~360 -
-      bounce                0
+			radius                0 50.0~25% 300.0~25%
+			alpha                 400 1.0 0.0
+			rotation              0 ~360 -
+			bounce                0
 
-      lifeTime              400
-    }
+			lifeTime              400
+		}
 
-    count  2
-    delay  0
-    period 0 - ~0%
-  }
+		count  2
+		delay  0
+		period 0 - ~0%
+	}
 
-  ejector
-  {
-    particle
-    {
-      displacement          0 0 0 ~0
+	ejector
+	{
+		particle
+		{
+			displacement          0 0 0 ~0
 
-      velocityType          static
-      velocityDir           linear
-      velocityMagnitude     750
-      velocity              0 0 1 ~90
+			velocityType          static
+			velocityDir           linear
+			velocityMagnitude     750
+			velocity              0 0 1 ~90
 
-      accelerationType      static
-      accelerationDir       linear
-      accelerationMagnitude 1700
-      acceleration          0 0 -1 0
+			accelerationType      static
+			accelerationDir       linear
+			accelerationMagnitude 1700
+			acceleration          0 0 -1 0
 
-      radius                0 50 15
-      alpha                 0 1.0 1.0
-      bounce                0
-      rotation              0 0 50
-      lifeTime              180
+			radius                0 50 15
+			alpha                 0 1.0 1.0
+			bounce                0
+			rotation              0 0 50
+			lifeTime              180
 
-      childTrailSystem		grenadepuff
-    }
+			childTrailSystem		grenadepuff
+		}
 
-    count  10~50%
-    delay  0
-    period 0 1 4~10%
-  }
+		count  10~50%
+		delay  0
+		period 0 1 4~10%
+	}
 
-  // luci shockwave haze
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/weapons/lcannon/shockwave_haze
+	// luci shockwave haze
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/weapons/lcannon/shockwave_haze
 
-      displacement 0 0 8 ~0
+			displacement 0 0 8 ~0
 
-      velocityType      static
-      velocityDir       linear
-      velocityMagnitude 0
-      velocity          0 0 1 ~60
+			velocityType      static
+			velocityDir       linear
+			velocityMagnitude 0
+			velocity          0 0 1 ~60
 
-      radius            0 50 500
-      alpha             0 1.0 0.0
-      rotation          0 ~360 -
-      bounce            0.0
+			radius            0 50 500
+			alpha             0 1.0 0.0
+			rotation          0 ~360 -
+			bounce            0.0
 
-      lifeTime          150
-    }
+			lifeTime          150
+		}
 
-    count  1
-    delay  0
-    period 0 - ~0%
-  }
+		count  1
+		delay  0
+		period 0 - ~0%
+	}
 }

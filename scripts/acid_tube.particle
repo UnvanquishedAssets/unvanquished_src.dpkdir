@@ -1,35 +1,35 @@
 alienAcidTubePS
 {
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/sprites/acid_spore
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/sprites/acid_spore
 
-      displacement 0 0 0 0
+			displacement 0 0 0 0
 
-      velocityType      normal
-      velocityDir       linear
-      velocityMagnitude 100~100%
-      velocity          0 0 0 ~100
+			velocityType      normal
+			velocityDir       linear
+			velocityMagnitude 100~100%
+			velocity          0 0 0 ~100
 
-      accelerationType      static
-      accelerationDir       linear
-      accelerationMagnitude 100
-      acceleration          0 0 -1 0
+			accelerationType      static
+			accelerationDir       linear
+			accelerationMagnitude 100
+			acceleration          0 0 -1 0
 
-      radius 0 4 200~20%
-      alpha  1000~100% 0.6~0.2 0
-      rotation 0 ~360 ~360
-      bounce 0
+			radius 0 4 200~20%
+			alpha  1000~100% 0.6~0.2 0
+			rotation 0 ~360 ~360
+			bounce 0
 
-      lifeTime 3000~10%
+			lifeTime 3000~10%
 
-      cullOnStartSolid
-    }
+			cullOnStartSolid
+		}
 
-    count 20
-    delay 0
-    period 50 - 0
-  }
+		count 20
+		delay 0
+		period 50 - 0
+	}
 }

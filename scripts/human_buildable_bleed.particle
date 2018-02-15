@@ -1,61 +1,61 @@
 humanBuildableBleedPS
 {
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
-      displacement          0 0 0 0
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
+			displacement          0 0 0 0
 
-      velocityType          normal
+			velocityType          normal
 
-      velocityDir           linear
+			velocityDir           linear
 
-      velocityMagnitude     15
-      velocity              0 0 0 ~35
+			velocityMagnitude     15
+			velocity              0 0 0 ~35
 
-      accelerationType      static
-      accelerationDir       linear
-      acceleration          0 0 -1 ~5
-      accelerationMagnitude 25
+			accelerationType      static
+			accelerationDir       linear
+			acceleration          0 0 -1 ~5
+			accelerationMagnitude 25
 
-      radius                0 5 8
-      alpha                 250 .75 0
-      rotation              0 ~-15 ~15
-      bounce                0.0
-      color                 0 { 0.8 0.2 0.2 } -
+			radius                0 5 8
+			alpha                 250 .75 0
+			rotation              0 ~-15 ~15
+			bounce                0.0
+			color                 0 { 0.8 0.2 0.2 } -
 
-      lifeTime              200~50
-    }
+			lifeTime              200~50
+		}
 
-    particle
-    {
-      shader sync gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
-      displacement          0 0 0 0
+		particle
+		{
+			shader sync gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
+			displacement          0 0 0 0
 
-      velocityType          normal
+			velocityType          normal
 
-      velocityDir           linear
+			velocityDir           linear
 
-      velocityMagnitude     15
-      velocity              0 0 0 ~35
+			velocityMagnitude     15
+			velocity              0 0 0 ~35
 
-      accelerationType      static
-      accelerationDir       linear
-      acceleration          0 0 -1 ~5
-      accelerationMagnitude 25
+			accelerationType      static
+			accelerationDir       linear
+			acceleration          0 0 -1 ~5
+			accelerationMagnitude 25
 
-      radius                0 5 8
-      alpha                 250 .75 0
-      rotation              0 ~-15 ~15
-      bounce                0.0
-      color                 0 { 0.8 0.2 0.2 } -
+			radius                0 5 8
+			alpha                 250 .75 0
+			rotation              0 ~-15 ~15
+			bounce                0.0
+			color                 0 { 0.8 0.2 0.2 } -
 
-      lifeTime              200~50
-    }
+			lifeTime              200~50
+		}
 
-    count   2
-    delay   0
-    period  0 - 0
-  }
+		count   2
+		delay   0
+		period  0 - 0
+	}
 }

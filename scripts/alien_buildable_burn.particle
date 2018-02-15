@@ -1,92 +1,92 @@
 alienBuildableBurnPS
 {
-  // smoke
-  ejector
-  {
-    particle
-    {
-      //shader sync gfx/weapons/rifle/legacy_smoke
-      shader sync gfx/weapons/flamer/smoke
+	// smoke
+	ejector
+	{
+		particle
+		{
+			//shader sync gfx/weapons/rifle/legacy_smoke
+			shader sync gfx/weapons/flamer/smoke
 
-      displacement 0 0 8 ~0
+			displacement 0 0 8 ~0
 
-      velocityType      static
-      velocityDir       linear
-      velocityMagnitude 50
-      velocity          0 0 1 ~60
+			velocityType      static
+			velocityDir       linear
+			velocityMagnitude 50
+			velocity          0 0 1 ~60
 
-      accelerationType      static
-      accelerationDir       linear
-      accelerationMagnitude 50
-      acceleration          0 0 1 0
+			accelerationType      static
+			accelerationDir       linear
+			accelerationMagnitude 50
+			acceleration          0 0 1 0
 
-      radius 0 20.0 60.0
-      alpha  0 0.6 0.0
-      rotation 0 ~360 -
-      bounce 0.5
+			radius 0 20.0 60.0
+			alpha  0 0.6 0.0
+			rotation 0 ~360 -
+			bounce 0.5
 
-      lifeTime 1500~50%
-    }
+			lifeTime 1500~50%
+		}
 
-    count infinite
-    delay 0
-    period 200 - ~0%
-  }
+		count infinite
+		delay 0
+		period 200 - ~0%
+	}
 
-  // heat haze
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/weapons/flamer/haze
-      displacement 0 0 20 ~0
+	// heat haze
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/weapons/flamer/haze
+			displacement 0 0 20 ~0
 
-      velocityType      static
-      velocityDir       linear
-      velocityMagnitude 50
-      velocity          0 0 1 ~15
+			velocityType      static
+			velocityDir       linear
+			velocityMagnitude 50
+			velocity          0 0 1 ~15
 
-      accelerationType      static
-      accelerationDir       linear
-      accelerationMagnitude 200
-      acceleration          0 0 1 ~0
+			accelerationType      static
+			accelerationDir       linear
+			accelerationMagnitude 200
+			acceleration          0 0 1 ~0
 
-      radius 0 20.0 45.0
-      alpha  0 1.0 0.0
-      rotation 0 ~360 -
-      bounce 0.1
+			radius 0 20.0 45.0
+			alpha  0 1.0 0.0
+			rotation 0 ~360 -
+			bounce 0.1
 
-      lifeTime 800
-    }
+			lifeTime 800
+		}
 
-    count infinite
-    delay 500
-    period 150 - ~0%
-  }
+		count infinite
+		delay 500
+		period 150 - ~0%
+	}
 
-  // flames
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
-      displacement 0 0 -2 ~0
+	// flames
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
+			displacement 0 0 -2 ~0
 
-      velocityType      static
-      velocityDir       linear
-      velocityMagnitude 20
-      velocity          0 0 1 ~60
+			velocityType      static
+			velocityDir       linear
+			velocityMagnitude 20
+			velocity          0 0 1 ~60
 
-      radius 0 10.0 30.0
-      alpha  0 1.0 0.0
-      rotation 0 ~360 -
-      bounce 0.1
+			radius 0 10.0 30.0
+			alpha  0 1.0 0.0
+			rotation 0 ~360 -
+			bounce 0.1
 
-      lifeTime 600~50%
-    }
+			lifeTime 600~50%
+		}
 
-    count infinite
-    delay 0
-    period 40 - ~0%
-  }
+		count infinite
+		delay 0
+		period 40 - ~0%
+	}
 }

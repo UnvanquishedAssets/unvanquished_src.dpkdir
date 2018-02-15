@@ -1,205 +1,205 @@
 humanBuildableDamagedPS
 {
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/weapons/rifle/smoke
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/weapons/rifle/smoke
 
-      displacement 0 0 8 ~0
+			displacement 0 0 8 ~0
 
-      velocityType      static
-      velocityDir       linear
-      velocityMagnitude 50
-      velocity          0 0 1 ~60
+			velocityType      static
+			velocityDir       linear
+			velocityMagnitude 50
+			velocity          0 0 1 ~60
 
-      accelerationType      static
-      accelerationDir       linear
-      accelerationMagnitude 50
-      acceleration          0 0 1 0
+			accelerationType      static
+			accelerationDir       linear
+			accelerationMagnitude 50
+			acceleration          0 0 1 0
 
-      radius 0 10.0 50.0
-      alpha  0 0.5 0.0
-      rotation 0 ~360 -
-      bounce 0.5
+			radius 0 10.0 50.0
+			alpha  0 0.5 0.0
+			rotation 0 ~360 -
+			bounce 0.5
 
-      lifeTime 1500~50%
-    }
+			lifeTime 1500~50%
+		}
 
-    count infinite
-    delay 0
-    period 200 - ~0%
-  }
+		count infinite
+		delay 0
+		period 200 - ~0%
+	}
 
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/weapons/tracer/spark
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/weapons/tracer/spark
 
-      displacement 0 0 11 ~0
+			displacement 0 0 11 ~0
 
-      velocityType      static
-      velocityDir       linear
-      velocityMagnitude 200
-      velocity          0 0 1 ~60
+			velocityType      static
+			velocityDir       linear
+			velocityMagnitude 200
+			velocity          0 0 1 ~60
 
-      accelerationType      static
-      accelerationDir       linear
-      accelerationMagnitude 800
-      acceleration          0 0 -1 0
+			accelerationType      static
+			accelerationDir       linear
+			accelerationMagnitude 800
+			acceleration          0 0 -1 0
 
-      radius 0 4.0 2.0
-      alpha  0 1.0 0.0
-      rotation 0 ~360 -
-      bounce 0.6
+			radius 0 4.0 2.0
+			alpha  0 1.0 0.0
+			rotation 0 ~360 -
+			bounce 0.6
 
-      lifeTime 1500~50%
-    }
+			lifeTime 1500~50%
+		}
 
-    count infinite
-    delay 0
-    period 700 - ~0%
-  }
+		count infinite
+		delay 0
+		period 700 - ~0%
+	}
 }
 
 humanBuildableDestroyedTrailPS
 {
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/weapons/flamer/flame/flame00 gfx/weapons/flamer/flame/flame01 gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/weapons/flamer/flame/flame00 gfx/weapons/flamer/flame/flame01 gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
 
-      displacement 0 0 40 ~0
+			displacement 0 0 40 ~0
 
-      velocityType      static
-      velocityDir       linear
-      velocityMagnitude 30
-      velocity          0 0 -1 ~60
+			velocityType      static
+			velocityDir       linear
+			velocityMagnitude 30
+			velocity          0 0 -1 ~60
 
-      radius 0 20.0 15.0
-      alpha  0 1.0 0.0
-      rotation 0 ~360 -
-      bounce 0.2
+			radius 0 20.0 15.0
+			alpha  0 1.0 0.0
+			rotation 0 ~360 -
+			bounce 0.2
 
-      lifeTime 1000
-    }
+			lifeTime 1000
+		}
 
-    count 10
-    delay 0
-    period 80 - ~0%
-  }
+		count 10
+		delay 0
+		period 80 - ~0%
+	}
 }
 
 humanBuildableDestroyedPS
 {
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/weapons/tracer/spark
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/weapons/tracer/spark
 
-      displacement 0 0 8 ~0
+			displacement 0 0 8 ~0
 
-      velocityType      static
-      velocityDir       linear
-      velocityMagnitude 350~75%
-      velocity          0 0 1 ~60
+			velocityType      static
+			velocityDir       linear
+			velocityMagnitude 350~75%
+			velocity          0 0 1 ~60
 
-      accelerationType      static
-      accelerationDir       linear
-      accelerationMagnitude 800
-      acceleration          0 0 -1 0
+			accelerationType      static
+			accelerationDir       linear
+			accelerationMagnitude 800
+			acceleration          0 0 -1 0
 
-      radius 0 4.0 2.0
-      alpha  0 1.0 0.0
-      rotation 0 ~360 -
-      bounce 0.4~100%
+			radius 0 4.0 2.0
+			alpha  0 1.0 0.0
+			rotation 0 ~360 -
+			bounce 0.4~100%
 
-      lifeTime 5000~100%
-    }
+			lifeTime 5000~100%
+		}
 
-    count 80
-    delay 0
-    period 0 - ~0%
-  }
+		count 80
+		delay 0
+		period 0 - ~0%
+	}
 
-  ejector
-  {
-    particle
-    {
-      shader sync gfx/weapons/flamer/flame/flame00 gfx/weapons/flamer/flame/flame01 gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/weapons/flamer/flame/flame00 gfx/weapons/flamer/flame/flame01 gfx/weapons/flamer/flame/flame02 gfx/weapons/flamer/flame/flame03 gfx/weapons/flamer/flame/flame04 gfx/weapons/flamer/flame/flame05 gfx/weapons/flamer/flame/flame06 gfx/weapons/flamer/flame/flame07 gfx/weapons/flamer/flame/flame08 gfx/weapons/flamer/flame/flame09 gfx/weapons/flamer/flame/flame10 gfx/weapons/flamer/flame/flame11 gfx/weapons/flamer/flame/flame12 gfx/weapons/flamer/flame/flame13 gfx/weapons/flamer/flame/flame14 gfx/weapons/flamer/flame/flame15 gfx/weapons/flamer/flame/flame16 gfx/weapons/flamer/flame/flame17 gfx/weapons/flamer/flame/flame18 gfx/weapons/flamer/flame/flame19 gfx/weapons/flamer/flame/flame20 gfx/weapons/flamer/flame/flame21 gfx/weapons/flamer/flame/flame22 gfx/weapons/flamer/flame/flame23 gfx/weapons/flamer/flame/flame24
 
-      displacement 0 0 40 ~0
+			displacement 0 0 40 ~0
 
-      velocityType      static
-      velocityDir       linear
-      velocityMagnitude 300~75%
-      velocity          0 0 1 ~60
+			velocityType      static
+			velocityDir       linear
+			velocityMagnitude 300~75%
+			velocity          0 0 1 ~60
 
-      accelerationType      static
-      accelerationDir       linear
-      accelerationMagnitude 800
-      acceleration          0 0 -1 0
+			accelerationType      static
+			accelerationDir       linear
+			accelerationMagnitude 800
+			acceleration          0 0 -1 0
 
-      radius 0 20.0 30.0
-      alpha  0 1.0 0.0
-      rotation 0 ~360 -
-      bounce 0.2
+			radius 0 20.0 30.0
+			alpha  0 1.0 0.0
+			rotation 0 ~360 -
+			bounce 0.2
 
-      lifeTime 1000
+			lifeTime 1000
 
-      childSystem humanBuildableDestroyedTrailPS
-    }
+			childSystem humanBuildableDestroyedTrailPS
+		}
 
-    count 10
-    delay 0
-    period 10 - ~0%
-  }
+		count 10
+		delay 0
+		period 10 - ~0%
+	}
 
-  ejector
-  {
-    particle
-    {
-      model models/fx/metal_gibs/m_gib1.md3 models/fx/metal_gibs/m_gib2.md3 models/fx/metal_gibs/m_gib3.md3 models/fx/metal_gibs/m_gib4.md3 models/fx/metal_gibs/m_gib5.md3 models/fx/metal_gibs/m_gib6.md3 models/fx/metal_gibs/m_gib7.md3 models/fx/metal_gibs/m_gib8.md3
+	ejector
+	{
+		particle
+		{
+			model models/fx/metal_gibs/m_gib1.md3 models/fx/metal_gibs/m_gib2.md3 models/fx/metal_gibs/m_gib3.md3 models/fx/metal_gibs/m_gib4.md3 models/fx/metal_gibs/m_gib5.md3 models/fx/metal_gibs/m_gib6.md3 models/fx/metal_gibs/m_gib7.md3 models/fx/metal_gibs/m_gib8.md3
 
-      displacement 0 0 40 ~0
+			displacement 0 0 40 ~0
 
-      velocityType      static
-      velocityDir       linear
-      velocityMagnitude 300~75%
-      velocity          0 0 1 ~60
+			velocityType      static
+			velocityDir       linear
+			velocityMagnitude 300~75%
+			velocity          0 0 1 ~60
 
-      accelerationType      static
-      accelerationDir       linear
-      accelerationMagnitude 800
-      acceleration          0 0 -1 0
+			accelerationType      static
+			accelerationDir       linear
+			accelerationMagnitude 800
+			acceleration          0 0 -1 0
 
-      radius          0 1.0 -
-      bounce          0.2
-      bounceMark      1~1 16 gfx/marks/burn_mrk
-      bounceSound     ~1 sound/buildables/human/fragmentbounce
+			radius          0 1.0 -
+			bounce          0.2
+			bounceMark      1~1 16 gfx/weapons/flamer/mark
+			bounceSound     ~1 sound/buildables/human/fragmentbounce
 
-      lifeTime        7000~1000
-    }
+			lifeTime        7000~1000
+		}
 
-    count 8
-    delay 0
-    period 10 - ~0%
-  }
+		count 8
+		delay 0
+		period 10 - ~0%
+	}
 
-  ejector
-  {
-    particle
-    {
-      dynamicLight    0 300 0 { 1.0 0.75 0.0 }
+	ejector
+	{
+		particle
+		{
+			dynamicLight    0 300 0 { 1.0 0.75 0.0 }
 
-      lifeTime        600~100
-    }
+			lifeTime        600~100
+		}
 
-    count 1
-    delay 0
-    period 0 - ~0%
-  }
+		count 1
+		delay 0
+		period 0 - ~0%
+	}
 }
