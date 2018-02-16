@@ -1,4 +1,4 @@
-humanBuildableBleedPS
+particles/buildables/human_base/bleed
 {
 	ejector
 	{

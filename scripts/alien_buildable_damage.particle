@@ -1,4 +1,4 @@
-alienBuildableDamagedPS
+particles/buildables/alien_base/damaged
 {
 	ejector
 	{
@@ -30,7 +30,7 @@ alienBuildableDamagedPS
 	}
 }
 
-alienBuildableDestroyedPS
+particles/buildables/alien_base/destroyed
 {
 	ejector
 	{

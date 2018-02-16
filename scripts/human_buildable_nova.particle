@@ -1,6 +1,6 @@
-// TODO: Write unique humanBuildableNovaPS
+// TODO: Write unique particles/buildables/human_base/nova
 
-humanBuildableNovaPS
+particles/buildables/human_base/nova
 {
 	ejector
 	{
@@ -55,7 +55,7 @@ humanBuildableNovaPS
 			rotation              0 0 50
 			lifeTime              180
 
-			childTrailSystem		grenadepuff
+			childTrailSystem		trails/weapons/grenade/puff
 		}
 
 		count  10~50%

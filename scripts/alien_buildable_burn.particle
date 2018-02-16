@@ -1,4 +1,4 @@
-alienBuildableBurnPS
+particles/buildables/alien_base/burn
 {
 	// smoke
 	ejector

@@ -1,4 +1,4 @@
-MuzzleFlashTurret
+particles/buildables/mgturret/muzzleflash
 {
 	ejector
 	{

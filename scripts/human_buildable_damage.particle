@@ -1,4 +1,4 @@
-humanBuildableDamagedPS
+particles/buildables/human_base/damaged
 {
 	ejector
 	{
@@ -63,7 +63,7 @@ humanBuildableDamagedPS
 	}
 }
 
-humanBuildableDestroyedTrailPS
+particles/buildables/human_base/destroyed_trail
 {
 	ejector
 	{
@@ -92,7 +92,7 @@ humanBuildableDestroyedTrailPS
 	}
 }
 
-humanBuildableDestroyedPS
+particles/buildables/human_base/destroyed
 {
 	ejector
 	{
@@ -150,7 +150,7 @@ humanBuildableDestroyedPS
 
 			lifeTime 1000
 
-			childSystem humanBuildableDestroyedTrailPS
+			childSystem particles/buildables/human_base/destroyed_trail
 		}
 
 		count 10

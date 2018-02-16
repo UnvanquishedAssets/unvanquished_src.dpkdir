@@ -1,4 +1,4 @@
-alienBuildableBleedPS
+particles/buildables/alien_base/bleed
 {
 	ejector
 	{
