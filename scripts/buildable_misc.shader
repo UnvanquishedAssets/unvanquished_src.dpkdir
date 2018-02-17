@@ -1,16 +1,16 @@
-gfx/misc/greenbuild
+gfx/buildables/common/greenbuild
 {
 	{
-		map gfx/misc/greenbuild
+		map gfx/buildables/common/greenbuild
 		blendfunc add
 		rgbGen identity
 	}
 }
 
-gfx/misc/redbuild
+gfx/buildables/common/redbuild
 {
 	{
-		map gfx/misc/redbuild
+		map gfx/buildables/common/redbuild
 		blendfunc add
 		rgbGen identity
 	}

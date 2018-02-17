@@ -12,12 +12,12 @@ models/buildables/acid_tube/acid_tube
 	cull none
 }
 
-gfx/sprites/acid_spore
+gfx/buildables/acid_tube/spore
 {
 	cull none
 	entityMergable
 	{
-		map gfx/sprites/acid_spore
+		map gfx/buildables/acid_tube/spore
 		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
 		rgbGen    vertex
 		alphaGen  vertex

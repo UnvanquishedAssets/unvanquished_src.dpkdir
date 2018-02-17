@@ -4,7 +4,7 @@ particles/buildables/acide_tube/spore
 	{
 		particle
 		{
-			shader sync gfx/sprites/acid_spore
+			shader sync gfx/buildables/acid_tube/spore
 
 			displacement 0 0 0 0
 

@@ -7,12 +7,12 @@ models/buildables/booster/body
 	glowMap         models/buildables/booster/booster_a
 }
 
-gfx/sprites/booster_spore
+gfx/buildables/booster/spore
 {
 	cull none
 	entityMergable
 	{
-		map gfx/sprites/booster_spore
+		map gfx/buildables/booster/spore
 		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
 		rgbGen    vertex
 		alphaGen  vertex

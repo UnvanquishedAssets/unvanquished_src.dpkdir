@@ -4,7 +4,7 @@ particles/buildables/alien_base/damaged
 	{
 		particle
 		{
-			shader sync gfx/sprites/green_acid
+			shader sync gfx/players/green_acid
 
 			velocityType      normal
 			velocityDir       linear
@@ -36,7 +36,7 @@ particles/buildables/alien_base/destroyed
 	{
 		particle
 		{
-			shader sync gfx/sprites/green_acid
+			shader sync gfx/players/green_acid
 
 			displacement 0 0 0 ~70
 			normalDisplacement  80
@@ -63,7 +63,7 @@ particles/buildables/alien_base/destroyed
 	{
 		particle
 		{
-			shader sync gfx/sprites/green_acid
+			shader sync gfx/players/green_acid
 
 			displacement 0 0 40 ~0
 
@@ -110,7 +110,7 @@ particles/buildables/alien_base/destroyed
 
 			radius          0 1.0 -
 			bounce          0.2
-			bounceMark      1~1 16 creep
+			bounceMark      1~1 16 gfx/buildables/creep/creep
 			bounceSound     ~1 sound/misc/organic_bounce
 
 			lifeTime 5000~1000
