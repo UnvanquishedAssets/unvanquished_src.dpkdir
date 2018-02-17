@@ -4,7 +4,7 @@ particles/buildables/alien_base/bleed
 	{
 		particle
 		{
-			shader sync gfx/players/blood
+			shader sync gfx/players/common/blood
 			displacement          0 0 0 0
 
 			velocityType          normal
@@ -30,7 +30,7 @@ particles/buildables/alien_base/bleed
 
 		particle
 		{
-			shader sync gfx/players/blood
+			shader sync gfx/players/common/blood
 			displacement          0 0 0 0
 
 			velocityType          normal
