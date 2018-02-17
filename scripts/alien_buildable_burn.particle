@@ -5,7 +5,6 @@ particles/buildables/alien_base/burn
 	{
 		particle
 		{
-			//shader sync gfx/weapons/rifle/legacy_smoke
 			shader sync gfx/weapons/flamer/smoke
 
 			displacement 0 0 8 ~0
