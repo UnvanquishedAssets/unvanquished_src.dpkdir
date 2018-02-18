@@ -111,7 +111,7 @@ particles/buildables/alien_base/destroyed
 			radius          0 1.0 -
 			bounce          0.2
 			bounceMark      1~1 16 gfx/buildables/creep/creep
-			bounceSound     ~1 sound/misc/organic_bounce
+			bounceSound     ~1 models/weapons/lockblob/impact0
 
 			lifeTime 5000~1000
 		}
