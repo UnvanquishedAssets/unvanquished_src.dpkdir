@@ -95,6 +95,8 @@ models/buildables/medistat/rings
 
 models/buildables/medistat/scan
 {
+	// do not enable that, it crashes netradiant
+	// qer_editorimage models/buildables/medistat/noise
 	{
 		map models/buildables/medistat/noise
 		tcMod scale 5 5
