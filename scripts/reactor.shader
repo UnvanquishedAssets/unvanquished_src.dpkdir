@@ -1,6 +1,6 @@
 models/buildables/reactor/reactor1
 {
-	qer_editorimage models/buildables/reactor/reactor_core_d
+	qer_editorimage models/buildables/reactor/reactor_core_p
 	diffuseMap models/buildables/reactor/reactor_core_d
 	{
 		stage specularMap
@@ -19,7 +19,7 @@ models/buildables/reactor/reactor1
 
 models/buildables/reactor/reactor1_dead
 {
-	qer_editorimage models/buildables/reactor/reactor_core_d
+	qer_editorimage models/buildables/reactor/reactor_core_p
 	diffuseMap models/buildables/reactor/reactor_core_d
 	{
 		stage specularMap
@@ -29,7 +29,7 @@ models/buildables/reactor/reactor1_dead
 
 models/buildables/reactor/reactor2
 {
-	qer_editorimage models/buildables/reactor/reactor_arm_d
+	qer_editorimage models/buildables/reactor/reactor_arm_p
 	diffuseMap models/buildables/reactor/reactor_arm_d
 	normalMap models/buildables/reactor/reactor_arm_n
 	{
@@ -55,7 +55,7 @@ models/buildables/reactor/reactor2
 
 models/buildables/reactor/reactor2_dead
 {
-	qer_editorimage models/buildables/reactor/reactor_arm_d
+	qer_editorimage models/buildables/reactor/reactor_arm_p
 	diffuseMap models/buildables/reactor/reactor_arm_d
 	normalMap models/buildables/reactor/reactor_arm_n
 	{

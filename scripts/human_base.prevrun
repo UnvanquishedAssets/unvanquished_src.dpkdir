@@ -1,0 +1,10 @@
+[_init_]
+extend = "${game}"
+
+[dir]
+source = "models/buildables/human_base"
+preview = "models/buildables/human_base"
+
+[suffix]
+source = "_d"
+preview = "_p"

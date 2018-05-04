@@ -1,6 +1,6 @@
 models/buildables/drill/drill
 {
-	qer_editorimage models/buildables/drill/drill_d
+	qer_editorimage models/buildables/drill/drill_p
 	diffuseMap models/buildables/drill/drill_d
 	normalMap models/buildables/drill/drill_n
 	specularMap models/buildables/drill/drill_s

@@ -1,6 +1,6 @@
 models/buildables/mgturret/turret
 {
-	qer_editorimage models/buildables/mgturret/turret_d
+	qer_editorimage models/buildables/mgturret/turret_p
 	diffuseMap  models/buildables/mgturret/turret_d
 	normalMap   models/buildables/mgturret/turret_n
 	specularMap models/buildables/mgturret/turret_s

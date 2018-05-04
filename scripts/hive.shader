@@ -1,6 +1,6 @@
 models/buildables/hive/hive
 {
-	qer_editorimage models/buildables/hive/hive_d
+	qer_editorimage models/buildables/hive/hive_p
 	diffuseMap  models/buildables/hive/hive_d
 	normalMap   models/buildables/hive/hive_n
 	specularMap models/buildables/hive/hive_s

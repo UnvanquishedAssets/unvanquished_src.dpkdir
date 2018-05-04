@@ -7,7 +7,7 @@ models/buildables/telenode/telenode_dead
 
 models/buildables/telenode/telenode
 {
-	qer_editorimage models/buildables/telenode/telenode_d
+	qer_editorimage models/buildables/telenode/telenode_p
 	diffuseMap	models/buildables/telenode/telenode_d
 	normalMap	models/buildables/telenode/telenode_n
 	specularMap	models/buildables/telenode/telenode_s
