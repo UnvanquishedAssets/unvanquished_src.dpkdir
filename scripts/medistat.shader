@@ -10,7 +10,7 @@ models/buildables/medistat/medistat
 		specularExponentMax 25
 	}
 	{
-		map models/buildables/medistat/medistat_g
+		map models/buildables/medistat/medistat_a
 		blendfunc add
 	}
 }

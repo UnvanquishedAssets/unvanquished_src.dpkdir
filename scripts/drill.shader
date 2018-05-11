@@ -6,13 +6,13 @@ models/buildables/drill/drill
 	specularMap models/buildables/drill/drill_s
 	// white lamp on top
 	{
-		map models/buildables/drill/drill_top_g
+		map models/buildables/drill/drill_top_a
 		blendfunc add
 		rgbGen    wave sin 1.0 0.85 0.5 0.08
 	}
 	// small yellow lamps around
 	{
-		map models/buildables/drill/drill_around_g
+		map models/buildables/drill/drill_around_a
 		blendfunc add
 		rgb       0.85 0.85 0.85
 	}

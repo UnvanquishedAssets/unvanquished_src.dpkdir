@@ -4,5 +4,5 @@ models/buildables/overmind/overmind
 	diffuseMap  models/buildables/overmind/overmind_d
 	normalMap   models/buildables/overmind/overmind_n
 	specularMap models/buildables/overmind/overmind_s
-	glowMap     models/buildables/overmind/overmind_g
+	glowMap     models/buildables/overmind/overmind_a
 }

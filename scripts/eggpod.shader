@@ -4,5 +4,5 @@ models/buildables/eggpod/eggpod
 	diffuseMap models/buildables/eggpod/eggpod_d
 	normalMap models/buildables/eggpod/eggpod_n
 	specularMap models/buildables/eggpod/eggpod_s
-	glowMap models/buildables/eggpod/eggpod_g
+	glowMap models/buildables/eggpod/eggpod_a
 }

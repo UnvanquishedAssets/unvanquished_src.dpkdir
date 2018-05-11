@@ -4,5 +4,5 @@ models/buildables/trapper/trapper
 	diffuseMap models/buildables/trapper/trapper_d
 	normalMap models/buildables/trapper/trapper_n
 	specularMap models/buildables/trapper/trapper_s
-	glowMap models/buildables/trapper/trapper_g
+	glowMap models/buildables/trapper/trapper_a
 }

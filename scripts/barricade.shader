@@ -4,7 +4,7 @@ models/buildables/barricade/body
 	diffuseMap  models/buildables/barricade/body_d
 	normalMap   models/buildables/barricade/body_n
 	specularMap models/buildables/barricade/body_s
-	glowMap     models/buildables/barricade/body_g
+	glowMap     models/buildables/barricade/body_a
 }
 
 models/buildables/barricade/tentacles

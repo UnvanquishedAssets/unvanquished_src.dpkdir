@@ -11,7 +11,7 @@ models/buildables/telenode/telenode
 	diffuseMap	models/buildables/telenode/telenode_d
 	normalMap	models/buildables/telenode/telenode_n
 	specularMap	models/buildables/telenode/telenode_s
-	glowMap		models/buildables/telenode/telenode_g
+	glowMap		models/buildables/telenode/telenode_a
 
 	when unpowered models/buildables/telenode/telenode_dead
 	when destroyed models/buildables/telenode/telenode_dead

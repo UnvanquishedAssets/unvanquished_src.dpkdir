@@ -8,7 +8,7 @@ models/buildables/acid_tube/acid_tube
 	}
 	normalMap models/buildables/acid_tube/acid_tube_n
 	specularMap models/buildables/acid_tube/acid_tube_s
-	glowMap models/buildables/acid_tube/acid_tube_g
+	glowMap models/buildables/acid_tube/acid_tube_a
 	cull none
 }
 
