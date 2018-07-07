@@ -1,6 +1,6 @@
 models/buildables/acid_tube/acid_tube
 {
-	qer_editorimage models/buildables/acid_tube/acid_tube_p
+	qer_editorimage models/buildables/acid_tube/acid_tube_d
 	{
 		blend diffusemap
 		map models/buildables/acid_tube/acid_tube_d

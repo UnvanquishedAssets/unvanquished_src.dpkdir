@@ -1,6 +1,6 @@
 models/buildables/barricade/body
 {
-	qer_editorimage models/buildables/barricade/body_p
+	qer_editorimage models/buildables/barricade/body_d
 	diffuseMap  models/buildables/barricade/body_d
 	normalMap   models/buildables/barricade/body_n
 	specularMap models/buildables/barricade/body_s
@@ -9,7 +9,7 @@ models/buildables/barricade/body
 
 models/buildables/barricade/tentacles
 {
-	qer_editorimage models/buildables/barricade/tentacles_p
+	qer_editorimage models/buildables/barricade/tentacles_d
 	diffuseMap  models/buildables/barricade/tentacles_d
 	normalMap   models/buildables/barricade/tentacles_n
 	specularMap models/buildables/barricade/tentacles_s

@@ -1,6 +1,6 @@
 models/buildables/medistat/medistat
 {
-	qer_editorimage models/buildables/medistat/medistat_p
+	qer_editorimage models/buildables/medistat/medistat_d
 	diffuseMap models/buildables/medistat/medistat_d
 	normalMap models/buildables/medistat/medistat_n
 	{
