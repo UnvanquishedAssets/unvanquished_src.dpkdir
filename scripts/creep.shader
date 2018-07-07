@@ -6,7 +6,7 @@ gfx/buildables/creep/creep
 	{
 		clampmap gfx/buildables/creep/creep_d
 		blendfunc blend
-		blend diffusemap
+		blend diffuseMap
 		rgbGen identity
 		alphaGen vertex
 		alphaFunc GE128

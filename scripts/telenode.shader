@@ -7,7 +7,7 @@ models/buildables/telenode/telenode_dead
 
 models/buildables/telenode/telenode
 {
-	qer_editorimage models/buildables/telenode/telenode_d
+	qer_editorImage models/buildables/telenode/telenode_d
 	diffuseMap	models/buildables/telenode/telenode_d
 	normalMap	models/buildables/telenode/telenode_n
 	specularMap	models/buildables/telenode/telenode_s
@@ -19,7 +19,7 @@ models/buildables/telenode/telenode
 
 models/buildables/telenode/effect
 {
-	qer_editorimage models/buildables/telenode/effect
+	qer_editorImage models/buildables/telenode/effect
 	cull none
 
 	surfaceparm nolightmap

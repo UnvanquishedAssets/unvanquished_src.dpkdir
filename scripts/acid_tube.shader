@@ -1,8 +1,8 @@
 models/buildables/acid_tube/acid_tube
 {
-	qer_editorimage models/buildables/acid_tube/acid_tube_d
+	qer_editorImage models/buildables/acid_tube/acid_tube_d
 	{
-		blend diffusemap
+		blend diffuseMap
 		map models/buildables/acid_tube/acid_tube_d
 		alphaFunc GE128
 	}

@@ -1,6 +1,6 @@
 models/buildables/booster/body
 {
-	qer_editorimage models/buildables/booster/booster_d
+	qer_editorImage models/buildables/booster/booster_d
 	diffuseMap      models/buildables/booster/booster_d
 	normalMap       models/buildables/booster/booster_n
 	specularMap     models/buildables/booster/booster_s

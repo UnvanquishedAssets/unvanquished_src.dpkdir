@@ -1,6 +1,6 @@
 models/buildables/medistat/medistat
 {
-	qer_editorimage models/buildables/medistat/medistat_d
+	qer_editorImage models/buildables/medistat/medistat_d
 	diffuseMap models/buildables/medistat/medistat_d
 	normalMap models/buildables/medistat/medistat_n
 	{
@@ -34,7 +34,7 @@ models/buildables/medistat/rings2
 
 models/buildables/medistat/display
 {
-	qer_editorimage models/buildables/medistat/display1
+	qer_editorImage models/buildables/medistat/display1
 	{
 		AnimMap 0.8 models/buildables/medistat/display1 models/buildables/medistat/display2 models/buildables/medistat/display3 models/buildables/medistat/display4 models/buildables/medistat/display5 models/buildables/medistat/display6 models/buildables/medistat/display7 models/buildables/medistat/display8
 		blendfunc add
@@ -61,7 +61,7 @@ models/buildables/medistat/displayD
 
 models/buildables/medistat/rings
 {
-	qer_editorimage models/buildables/medistat/cross_p
+	qer_editorImage models/buildables/medistat/cross_p
 	{
 		map models/buildables/medistat/noise
 		tcMod scale 5 5
@@ -96,7 +96,7 @@ models/buildables/medistat/rings
 models/buildables/medistat/scan
 {
 	// do not enable that, it crashes netradiant
-	// qer_editorimage models/buildables/medistat/noise
+	// qer_editorImage models/buildables/medistat/noise
 	{
 		map models/buildables/medistat/noise
 		tcMod scale 5 5
