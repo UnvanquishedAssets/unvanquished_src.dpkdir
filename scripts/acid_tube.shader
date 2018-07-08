@@ -1,6 +1,7 @@
 models/buildables/acid_tube/acid_tube
 {
 	qer_editorImage models/buildables/acid_tube/acid_tube_d
+	qer_alphaFunc greater 0.5
 	{
 		blend diffuseMap
 		map models/buildables/acid_tube/acid_tube_d

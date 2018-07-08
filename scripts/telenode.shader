@@ -19,13 +19,14 @@ models/buildables/telenode/telenode
 
 models/buildables/telenode/effect
 {
-	qer_editorImage models/buildables/telenode/effect
+	qer_editorImage models/buildables/telenode/effect_p
+	qer_trans 0.5
 	cull none
 
 	surfaceparm nolightmap
 
 	{
-		map   models/buildables/telenode/effect
+		map   models/buildables/telenode/effect_d
 		blend blend
 
 		tcMod scroll -1.0 0

@@ -62,6 +62,7 @@ models/buildables/medistat/displayD
 models/buildables/medistat/rings
 {
 	qer_editorImage models/buildables/medistat/cross_p
+	qer_trans 0.3
 	{
 		map models/buildables/medistat/noise
 		tcMod scale 5 5
