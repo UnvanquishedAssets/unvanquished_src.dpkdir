@@ -20,7 +20,7 @@ models/buildables/telenode/telenode
 models/buildables/telenode/effect
 {
 	qer_editorImage models/buildables/telenode/effect_p
-	qer_trans 0.5
+	qer_trans .5
 	cull none
 
 	surfaceparm nolightmap
@@ -29,7 +29,7 @@ models/buildables/telenode/effect
 		map   models/buildables/telenode/effect_d
 		blend blend
 
-		tcMod scroll -1.0 0
+		tcMod scroll -1 0
 
 		// TODO: Add a comment explaining what this does
 		tAlphaZeroClamp

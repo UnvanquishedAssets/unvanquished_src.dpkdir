@@ -16,6 +16,6 @@ gfx/buildables/booster/spore
 		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
 		rgbGen    vertex
 		alphaGen  vertex
-		depthFade 100.0
+		depthFade 100
 	}
 }

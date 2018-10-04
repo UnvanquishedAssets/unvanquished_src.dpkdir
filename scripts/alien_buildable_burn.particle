@@ -19,10 +19,10 @@ particles/buildables/alien_base/burn
 			accelerationMagnitude 50
 			acceleration          0 0 1 0
 
-			radius 0 20.0 60.0
-			alpha  0 0.6 0.0
+			radius 0 20 60
+			alpha  0 .6 0
 			rotation 0 ~360 -
-			bounce 0.5
+			bounce .5
 
 			lifeTime 1500~50%
 		}
@@ -50,10 +50,10 @@ particles/buildables/alien_base/burn
 			accelerationMagnitude 200
 			acceleration          0 0 1 ~0
 
-			radius 0 20.0 45.0
-			alpha  0 1.0 0.0
+			radius 0 20 45
+			alpha  0 1 0
 			rotation 0 ~360 -
-			bounce 0.1
+			bounce .1
 
 			lifeTime 800
 		}
@@ -76,10 +76,10 @@ particles/buildables/alien_base/burn
 			velocityMagnitude 20
 			velocity          0 0 1 ~60
 
-			radius 0 10.0 30.0
-			alpha  0 1.0 0.0
+			radius 0 10 30
+			alpha  0 1 0
 			rotation 0 ~360 -
-			bounce 0.1
+			bounce .1
 
 			lifeTime 600~50%
 		}

@@ -21,14 +21,14 @@ models/buildables/medistat/rings2
 		map models/buildables/medistat/noise
 		tcMod scale 6 6
 		blendfunc filter
-		tcMod scroll -0.1 0.1
+		tcMod scroll -.1 .1
 	}
 	{
 		map models/buildables/medistat/noise
 		tcMod scale 4 4
 		blendfunc add
-		tcMod scroll 0.1 0.1
-		rgbGen const ( 0 0.572549 0.690196 )
+		tcMod scroll .1 .1
+		rgbGen const ( 0 .572549 .690196 )
 	}
 }
 
@@ -36,7 +36,7 @@ models/buildables/medistat/display
 {
 	qer_editorImage models/buildables/medistat/display1
 	{
-		AnimMap 0.8 models/buildables/medistat/display1 models/buildables/medistat/display2 models/buildables/medistat/display3 models/buildables/medistat/display4 models/buildables/medistat/display5 models/buildables/medistat/display6 models/buildables/medistat/display7 models/buildables/medistat/display8
+		AnimMap .8 models/buildables/medistat/display1 models/buildables/medistat/display2 models/buildables/medistat/display3 models/buildables/medistat/display4 models/buildables/medistat/display5 models/buildables/medistat/display6 models/buildables/medistat/display7 models/buildables/medistat/display8
 		blendfunc add
 	}
 	when idle2 models/buildables/medistat/displayH
@@ -62,35 +62,35 @@ models/buildables/medistat/displayD
 models/buildables/medistat/rings
 {
 	qer_editorImage models/buildables/medistat/cross_p
-	qer_trans 0.3
+	qer_trans .3
 	{
 		map models/buildables/medistat/noise
 		tcMod scale 5 5
 		blendfunc filter
-		rgbGen const ( 0.678431 0.933333 0.960784 )
-		tcMod scroll -0.1 0.1
+		rgbGen const ( .678431 .933333 .960784 )
+		tcMod scroll -.1 .1
 		//tcGen environment
 	}
 	{
 		map models/buildables/medistat/noise2
 		tcMod scale 1 1
 		blendfunc add
-		tcMod scroll -0.1 -0.1
-		rgbGen const ( 0 0.572549 0.690196 )
+		tcMod scroll -.1 -.1
+		rgbGen const ( 0 .572549 .690196 )
 	}
 	{
 		map models/buildables/medistat/h_grid
 		tcMod scale 1 1
 		blendfunc add
-		tcMod scroll 0 0.1
-		rgbGen const ( 0 0.572549 0.690196 )
+		tcMod scroll 0 .1
+		rgbGen const ( 0 .572549 .690196 )
 	}
 		{
 		map models/buildables/medistat/v_grid
 		tcMod scale 1 1
 		blendfunc add
-		tcMod scroll 0.1 0
-		rgbGen const ( 0 0.572549 0.690196 )
+		tcMod scroll .1 0
+		rgbGen const ( 0 .572549 .690196 )
 	}
 }
 
@@ -102,28 +102,28 @@ models/buildables/medistat/scan
 		map models/buildables/medistat/noise
 		tcMod scale 5 5
 		blendfunc filter
-		rgbGen const ( 0.678431 0.933333 0.960784 )
-		tcMod scroll -0.1 0.1
+		rgbGen const ( .678431 .933333 .960784 )
+		tcMod scroll -.1 .1
 	}
 	{
 		map models/buildables/medistat/noise2
 		tcMod scale 1 1
 		blendfunc add
-		tcMod scroll -0.1 -0.1
-		rgbGen const ( 0 0.572549 0.690196 )
+		tcMod scroll -.1 -.1
+		rgbGen const ( 0 .572549 .690196 )
 	}
 	{
 		map models/buildables/medistat/h_grid
 		tcMod scale 1 1
 		blendfunc add
-		tcMod scroll 0 0.1
-		rgbGen const ( 0 0.572549 0.690196 )
+		tcMod scroll 0 .1
+		rgbGen const ( 0 .572549 .690196 )
 	}
 		{
 		map models/buildables/medistat/v_grid
 		tcMod scale 1 1
 		blendfunc add
-		tcMod scroll 0.1 0
-		rgbGen const ( 0 0.572549 0.690196 )
+		tcMod scroll .1 0
+		rgbGen const ( 0 .572549 .690196 )
 	}
 }

@@ -18,10 +18,10 @@ particles/buildables/human_base/damaged
 			accelerationMagnitude 50
 			acceleration          0 0 1 0
 
-			radius 0 10.0 50.0
-			alpha  0 0.5 0.0
+			radius 0 10 50
+			alpha  0 .5 0
 			rotation 0 ~360 -
-			bounce 0.5
+			bounce .5
 
 			lifeTime 1500~50%
 		}
@@ -49,10 +49,10 @@ particles/buildables/human_base/damaged
 			accelerationMagnitude 800
 			acceleration          0 0 -1 0
 
-			radius 0 4.0 2.0
-			alpha  0 1.0 0.0
+			radius 0 4 2
+			alpha  0 1 0
 			rotation 0 ~360 -
-			bounce 0.6
+			bounce .6
 
 			lifeTime 1500~50%
 		}
@@ -78,10 +78,10 @@ particles/buildables/human_base/destroyed_trail
 			velocityMagnitude 30
 			velocity          0 0 -1 ~60
 
-			radius 0 20.0 15.0
-			alpha  0 1.0 0.0
+			radius 0 20 15
+			alpha  0 1 0
 			rotation 0 ~360 -
-			bounce 0.2
+			bounce .2
 
 			lifeTime 1000
 		}
@@ -112,10 +112,10 @@ particles/buildables/human_base/destroyed
 			accelerationMagnitude 800
 			acceleration          0 0 -1 0
 
-			radius 0 4.0 2.0
-			alpha  0 1.0 0.0
+			radius 0 4 2
+			alpha  0 1 0
 			rotation 0 ~360 -
-			bounce 0.4~100%
+			bounce .4~100%
 
 			lifeTime 5000~100%
 		}
@@ -143,10 +143,10 @@ particles/buildables/human_base/destroyed
 			accelerationMagnitude 800
 			acceleration          0 0 -1 0
 
-			radius 0 20.0 30.0
-			alpha  0 1.0 0.0
+			radius 0 20 30
+			alpha  0 1 0
 			rotation 0 ~360 -
-			bounce 0.2
+			bounce .2
 
 			lifeTime 1000
 
@@ -176,8 +176,8 @@ particles/buildables/human_base/destroyed
 			accelerationMagnitude 800
 			acceleration          0 0 -1 0
 
-			radius          0 1.0 -
-			bounce          0.2
+			radius          0 1 -
+			bounce          .2
 			bounceMark      1~1 16 gfx/weapons/flamer/mark
 			bounceSound     ~1 sound/buildables/human/fragmentbounce
 
@@ -193,7 +193,7 @@ particles/buildables/human_base/destroyed
 	{
 		particle
 		{
-			dynamicLight    0 300 0 { 1.0 0.75 0.0 }
+			dynamicLight    0 300 0 { 1 .75 0 }
 
 			lifeTime        600~100
 		}

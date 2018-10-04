@@ -11,7 +11,7 @@ models/buildables/reactor/reactor1
 	{
 		map       models/buildables/reactor/reactor_core_glow
 		blendfunc add
-		rgbGen    wave sin 1.0 0.85 0.5 0.08
+		rgbGen    wave sin 1 .85 .5 .08
 	}
 
 	when destroyed models/buildables/reactor/reactor1_dead
@@ -41,13 +41,13 @@ models/buildables/reactor/reactor2
 	{
 		map       models/buildables/reactor/reactor_arm_glow1
 		blendfunc add
-		rgbGen    wave inversesawtooth 0.0 1.0 0.0 0.4
+		rgbGen    wave inversesawtooth 0 1 0 .4
 	}
 	// small yellow lamps
 	{
 		map       models/buildables/reactor/reactor_arm_glow2
 		blendfunc add
-		rgb       0.85 0.85 0.85
+		rgb       .85 .85 .85
 	}
 
 	when destroyed models/buildables/reactor/reactor2_dead

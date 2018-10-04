@@ -19,7 +19,7 @@ particles/buildables/acide_tube/spore
 			acceleration          0 0 -1 0
 
 			radius 0 4 200~20%
-			alpha  1000~100% 0.6~0.2 0
+			alpha  1000~100% .6~.2 0
 			rotation 0 ~360 ~360
 			bounce 0
 

@@ -8,13 +8,13 @@ models/buildables/drill/drill
 	{
 		map models/buildables/drill/drill_top_a
 		blendfunc add
-		rgbGen    wave sin 1.0 0.85 0.5 0.08
+		rgbGen    wave sin 1 .85 .5 .08
 	}
 	// small yellow lamps around
 	{
 		map models/buildables/drill/drill_around_a
 		blendfunc add
-		rgb       0.85 0.85 0.85
+		rgb       .85 .85 .85
 	}
 
 	when destroyed models/buildables/drill/drill_dead

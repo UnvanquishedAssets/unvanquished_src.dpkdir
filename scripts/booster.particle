@@ -19,7 +19,7 @@ particles/buildables/booster/spore
 			acceleration          0 0 -1 0
 
 			radius 0 10 400~20%
-			alpha  1000~100% 0.6~0.1 0
+			alpha  1000~100% .6~.1 0
 			rotation 0 ~360 ~360
 			bounce 0
 

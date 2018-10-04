@@ -20,8 +20,8 @@ particles/buildables/human_base/nova
 			accelerationMagnitude 10
 			acceleration          0 0 -1 0
 
-			radius                0 50.0~25% 300.0~25%
-			alpha                 400 1.0 0.0
+			radius                0 50~25% 300~25%
+			alpha                 400 1 0
 			rotation              0 ~360 -
 			bounce                0
 
@@ -50,7 +50,7 @@ particles/buildables/human_base/nova
 			acceleration          0 0 -1 0
 
 			radius                0 50 15
-			alpha                 0 1.0 1.0
+			alpha                 0 1 1
 			bounce                0
 			rotation              0 0 50
 			lifeTime              180
@@ -78,9 +78,9 @@ particles/buildables/human_base/nova
 			velocity          0 0 1 ~60
 
 			radius            0 50 500
-			alpha             0 1.0 0.0
+			alpha             0 1 0
 			rotation          0 ~360 -
-			bounce            0.0
+			bounce            0
 
 			lifeTime          150
 		}

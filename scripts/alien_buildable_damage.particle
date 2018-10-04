@@ -16,10 +16,10 @@ particles/buildables/alien_base/damaged
 			accelerationMagnitude 200
 			acceleration          0 0 -1 0
 
-			radius 0 4.0 20.0
-			alpha  0 1.0 0.0
+			radius 0 4 20
+			alpha  0 1 0
 			rotation 0 ~360 -
-			bounce 0.0
+			bounce 0
 
 			lifeTime 1000~50%
 		}
@@ -46,10 +46,10 @@ particles/buildables/alien_base/destroyed
 			velocityMagnitude 30
 			velocity          0 0 -1 ~0
 
-			radius 0 20.0 15.0
-			alpha  0 1.0 0.0
+			radius 0 20 15
+			alpha  0 1 0
 			rotation 0 ~360 -
-			bounce 0.0
+			bounce 0
 
 			lifeTime 1000~50%
 		}
@@ -77,10 +77,10 @@ particles/buildables/alien_base/destroyed
 			accelerationMagnitude 800
 			acceleration          0 0 -1 0
 
-			radius 0 20.0 30.0
-			alpha  0 1.0 0.0
+			radius 0 20 30
+			alpha  0 1 0
 			rotation 0 ~360 -
-			bounce 0.2
+			bounce .2
 
 			lifeTime 1000
 		}
@@ -108,8 +108,8 @@ particles/buildables/alien_base/destroyed
 			accelerationMagnitude 800
 			acceleration          0 0 -1 0
 
-			radius          0 1.0 -
-			bounce          0.2
+			radius          0 1 -
+			bounce          .2
 			bounceMark      1~1 16 gfx/buildables/creep/creep
 			bounceSound     ~1 models/weapons/lockblob/impact0
 

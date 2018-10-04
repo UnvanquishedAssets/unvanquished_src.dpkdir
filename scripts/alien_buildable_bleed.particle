@@ -22,8 +22,8 @@ particles/buildables/alien_base/bleed
 			radius                0 5 8
 			alpha                 250 .85 0
 			rotation              0 ~-15 ~15
-			bounce                0.0
-			color                 0 { 1.0 1.0 0.6 } -
+			bounce                0
+			color                 0 { 1 1 .6 } -
 
 			lifeTime              400~100
 		}
@@ -48,8 +48,8 @@ particles/buildables/alien_base/bleed
 			radius                0 5 8
 			alpha                 250 .85 0
 			rotation              0 ~165 ~195
-			bounce                0.0
-			color                 0 { 1.0 1.0 0.6 } -
+			bounce                0
+			color                 0 { 1 1 .6 } -
 
 			lifeTime              400~100
 		}

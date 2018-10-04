@@ -1,7 +1,7 @@
 models/buildables/acid_tube/acid_tube
 {
 	qer_editorImage models/buildables/acid_tube/acid_tube_d
-	qer_alphaFunc greater 0.5
+	qer_alphaFunc greater .5
 	{
 		blend diffuseMap
 		map models/buildables/acid_tube/acid_tube_d
@@ -22,6 +22,6 @@ gfx/buildables/acid_tube/spore
 		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
 		rgbGen    vertex
 		alphaGen  vertex
-		depthFade 100.0
+		depthFade 100
 	}
 }
