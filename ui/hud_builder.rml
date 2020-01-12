@@ -23,9 +23,10 @@ div#timer
 	position: absolute;
 	width: 40%;
 	height: 0.8em;
-	bottom: 0%;
+	bottom: 3%;
 	margin-left: auto;
 	margin-right: auto;
+	text-align:center;
 }
 div#rate
 {
@@ -43,6 +44,13 @@ progressbar
 	image: /gfx/colors/white;
 	orientation: left;
 }
+#buildQueueTime
+{
+
+margin:auto;
+margin-left:2em;
+text-align:center;
+}
 
 .warning {
 	color: yellow;
@@ -50,7 +58,7 @@ progressbar
 
 .error {
 	color: red;
-}
+
 </style>
 </head>
 <body id="hud_builder">
@@ -58,7 +66,7 @@ progressbar
 		<predictedMineEfficiency />
 	</div>
 	<div id="timer">
-		<progressbar src="btimer"/>
+		<div id="buildQueueTime"><buildQueueTime /></div>
 	</div>
 	<div id="rate">
 		<mine_rate/>
