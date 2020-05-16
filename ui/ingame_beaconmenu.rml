@@ -53,12 +53,12 @@
 		</style>
 		<script src="lua/util.lua" />
 	</head>
-	<body id="ingame_beaconmenu" class="circlemenu" onKeyDown="detectEscape(event, document)" onShow='Events.pushevent("buildDS beaconList default", event)'>
+	<body id="ingame_beaconmenu" class="circlemenu" onkeydown="detectEscape(event, document)" onshow='Events.pushevent("buildDS beaconList default", event)'>
 		<div id="foo">
 			<tabset class="circlemenu">
 				<tab>Beacons</tab>
 				<panel>
-				<circlemenu id="default" source="beaconList.default" fields="num" formatter="CMBeacons" onCancel="Events.pushevent('hide ingame_beaconmenu', event)"/>
+				<circlemenu id="default" source="beaconList.default" fields="num" formatter="CMBeacons" oncancel="Events.pushevent('hide ingame_beaconmenu', event)"/>
 					<div class="infobox">
 						<h2>
 							<datasource_single source="beaconList.default" fields="name" targetid="default"/>

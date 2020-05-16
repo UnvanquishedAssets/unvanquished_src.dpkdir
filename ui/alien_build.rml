@@ -97,12 +97,12 @@ div.infobox {
 </style>
 <script src="lua/util.lua" />
 </head>
-<body id="alien_build" class="circlemenu alien" onKeyDown="detectEscape(event, document)" onShow='Events.pushevent("buildDS alienBuildList default; buildDS alienBuildList upgrades", event)'>
+<body id="alien_build" class="circlemenu alien" onkeydown="detectEscape(event, document)" onshow='Events.pushevent("buildDS alienBuildList default; buildDS alienBuildList upgrades", event)'>
 <div id="foo">
 <tabset class="circlemenu">
 <tab></tab>
 <panel>
-<circlemenu id="default" source="alienBuildList.default" fields="num" formatter="CMAlienBuildables" onCancel="Events.pushevent('hide alien_build', event)"/>
+<circlemenu id="default" source="alienBuildList.default" fields="num" formatter="CMAlienBuildables" oncancel="Events.pushevent('hide alien_build', event)"/>
 <div class="infobox">
 <h2><datasource_single source="alienBuildList.default" fields="name" targetid="default" /></h2>
 <p class="text">Price: <datasource_single source="alienBuildList.default" fields="cost" targetid="default" /><br/>

@@ -87,7 +87,7 @@
 				</row>
 
 				<buttonbar>
-					<button onClick='Events.pushevent("exec r_mode -1; exec vid_restart", event)'>Apply now</button>
+					<button onclick='Events.pushevent("exec r_mode -1; exec vid_restart", event)'>Apply now</button>
 				</buttonbar>
 
 			</panel>
