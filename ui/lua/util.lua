@@ -33,7 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ]]--
 
 function detectEscape(event, document)
-	if event.parameters["key_identifier"] == rocket.key_identifier.ESCAPE then
+	if event.parameters["key_identifier"] == rmlui.key_identifier.ESCAPE then
 		if document.context.documents["menu_ingame"].style["visibility"] == "hidden" then
 			document:Hide()
 		else
