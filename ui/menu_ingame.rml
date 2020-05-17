@@ -95,23 +95,13 @@
 
 						<h2> Options </h2>
 						<indent>
-<<<<<<< HEAD
-							<blocklink onClick='Events.pushevent("show options_player", event)'> Player </blocklink>
-							<blocklink onClick='Events.pushevent("show options_graphics", event)'> Graphics </blocklink>
-							<blocklink onClick='Events.pushevent("show options_keys", event)'> Key bindings </blocklink>
-							<blocklink onClick='Events.pushevent("show options_mouse", event)'> Mouse and Aiming </blocklink>
-							<blocklink onClick='Events.pushevent("show options_sound", event)'> Sound </blocklink>
-							<blocklink onClick='Events.pushevent("show options_ui", event)'> User interface and HUD </blocklink>
-							<!-- <blocklink onClick='Events.pushevent("show options_fov", event)'> Fields of view </blocklink> -->
-=======
 							<blocklink onclick='Events.pushevent("show options_player", event)'> Player </blocklink>
 							<blocklink onclick='Events.pushevent("show options_graphics", event)'> Graphics </blocklink>
 							<blocklink onclick='Events.pushevent("show options_keys", event)'> Key bindings </blocklink>
-							<blocklink onclick='Events.pushevent("show options_mouse", event)'> Mouse and aim </blocklink>
+							<blocklink onclick='Events.pushevent("show options_mouse", event)'> Mouse and Aiming </blocklink>
 							<blocklink onclick='Events.pushevent("show options_sound", event)'> Sound </blocklink>
 							<blocklink onclick='Events.pushevent("show options_ui", event)'> User interface and HUD </blocklink>
 							<!-- <blocklink onclick='Events.pushevent("show options_fov", event)'> Fields of view </blocklink> -->
->>>>>>> 3ed7a40... rmlui: Lower case all inline events.
 						</indent>
 
 						<h2> Help </h2>
