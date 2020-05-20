@@ -16,7 +16,6 @@
 
 .circlemenu tab:selected{
 	font-size: 1.5em;
-	border-bottom-style:solid;
 	border-bottom-width: .1em;
 	border-bottom-color:#83fff5;
 }
@@ -50,17 +49,16 @@ circlemenu
 	height: 6.7em;
 	vertical-align: middle;
 	text-align:center;
-	icon-decorator: image;
-	icon-image: /ui/assets/circlemenu/circle.png;
+	decorator: image( /ui/assets/circlemenu/circle.png );
 }
 .circlemenu button:hover, .circlemenu button:active, .circlemenu button:focus{
-	icon-image: /ui/assets/circlemenu/circle-hover.png;
+	decorator: image( /ui/assets/circlemenu/circle-hover.png );
 }
 
 .circlemenu button.disabled, .circlemenu button.disabled:hover,
 .circlemenu button.disabled:active, .circlemenu button.disabled:focus{
-	icon-image: /ui/assets/circlemenu/circle.png;
-	icon-color-multiplier: rgb(12,12,12);
+	decorator: image( /ui/assets/circlemenu/circle.png );
+	image-color: rgb(12,12,12);
 }
 
 .circlemenu icon{
@@ -81,7 +79,7 @@ circlemenu
 
 .circlemenu button:hover
 {
-	background-color-multiplier: rgb(12,12,12);
+	image-color: rgb(12,12,12);
 }
 
 .circlemenu button img
