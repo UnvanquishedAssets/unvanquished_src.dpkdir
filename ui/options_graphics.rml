@@ -25,7 +25,7 @@
 
 
 	</head>
-	<body id="options_graphics" template="window" style="width: 45em; margin: 1em;" onload='Events.pushevent("buildDS resolutions", event)'>
+	<body id="options_graphics" template="window" style="width: 46em; margin: 1em;" onload='Events.pushevent("buildDS resolutions", event)'>
 		<h1> Graphics </h1>
 
 		<tabset>
@@ -137,13 +137,18 @@
 			<panel>
 				<h2>Effects</h2>
 				<p>
-					These special effects are all optional and can be toggled without having to restart video.
+					These special effects are all optional.
 					All of these effects will reduce your frame-rate.
 				</p>
 				<row>
 					<h3>Normal mapping</h3>
 					<input cvar="r_normalMapping" type="checkbox" />
 					<p>Simulates extra lighting detail on flat surfaces.</p>
+				</row>
+				<row>
+					<h3>Relief mapping</h3>
+					<input cvar="r_reliefMapping" type="checkbox" />
+					<p>Adds bumps on supported surfaces. Experimental.</p>
 				</row>
 				<row>
 					<h3>Bloom</h3>
@@ -153,7 +158,7 @@
 				<row>
 					<h3>Rim-lighting</h3>
 					<input cvar="r_rimlighting" type="checkbox" />
-					<p>Light the edges of models from behind.  Experimental. </p>
+					<p>Light the edges of models from behind.</p>
 				</row>
 				<row>
 					<h3>Heat-haze</h3>
@@ -168,7 +173,7 @@
 				<row>
 					<input cvar="r_ssao" type="checkbox" />
 					<h3>SSAO</h3>
-					<p> Screen space ambient occlusion.</p>
+					<p> Screen space ambient occlusion. Experimental</p>
 				</row>
 
 				<h2> Motion blur </h2>
@@ -190,6 +195,10 @@
 						<ilink onclick='Events.pushevent("exec reset cg_motionblurMinSpeed", event)'> (reset) </ilink>
 					</p>
 				</row>
+
+				<buttonbar>
+					<button onClick='Events.pushevent("exec vid_restart", event)'>Apply now</button>
+				</buttonbar>
 			</panel>
 
 			<tab> Lighting and particles</tab>
@@ -198,7 +207,7 @@
 				<row>
 					<select cvar="r_vertexLighting">
 						<option value="0">Light Map (normal)</option>
-						<option value="1">Vertex (low, ugly)</option>
+						<option value="1">Grid light (low, ugly)</option>
 					</select>
 					<h3>Lighting system</h3>
 				</row>
@@ -211,9 +220,11 @@
 					<select cvar="cg_shadows" style="width:20em;">
 						<option value="0">None</option>
 						<option value="1">Blobs (low)</option>
+						<!-- Implementations for those options are broken and can make the game unusable
 						<option value="3">Exponential mapping</option>
 						<option value="5">Variance mapping</option>
 						<option value="6">Exponential + variance (high)</option>
+						-->
 					</select>
 					<h3>Shadows</h3>
 				</row>
