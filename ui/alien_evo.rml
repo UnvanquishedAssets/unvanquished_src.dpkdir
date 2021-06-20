@@ -117,6 +117,7 @@ tabs {
 	end
 	function BuildEvolveMenu(document)
 		ClearEvolveInfo(document)
+		CirclemenuSetKeys(document)
 		CDataSource.Build("alienEvolveList", "default")
 		evolutions = CDataSource.Read("alienEvolveList", "default", "icon,name,description,availability,price,visible")
 		button_to_index = {}
@@ -137,7 +138,8 @@ tabs {
 	end
 </script>
 </head>
-<body id="alien_evo" class="circlemenu alien" onkeydown="CirclemenuHandleKey(event, document, EvolutionClick)" onshow="BuildEvolveMenu(document)">
+<body id="alien_evo" class="circlemenu alien" onkeydown="CirclemenuHandleKey(event, document, EvolutionClick)"
+ onkeyup="CirclemenuHandleKeyUp(event, document)" onshow="BuildEvolveMenu(document)">
 <tabset class="circlemenu">
 <tab></tab>
 <panel>
@@ -149,5 +151,6 @@ tabs {
 </div>
 </panel>
 </tabset>
+<keybind id="circlemenu-binds" style="display:none;overflow:hidden;widht:0px;height:0px;" cmd="+activate" team="aliens" />
 </body>
 </rml>

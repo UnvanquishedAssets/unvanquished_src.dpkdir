@@ -63,6 +63,25 @@ function AvailabilityIcon(availability)
 	end
 end
 
+CirclemenuKeyCount = {}
+CirclemenuKeys = {}
+function CirclemenuSetKeys(document)
+  if not document or not document:GetElementById("circlemenu-binds")then
+    return
+  end
+
+  local binds = document:GetElementById("circlemenu-binds").inner_rml
+  CirclemenuKeyCount = {}
+  CirclemenuKeys = {}
+
+  for match in (binds.." or "):gmatch("(.-)".." or ") do
+      local key = string.upper(match)
+      if rocket.key_identifier[key] then
+        CirclemenuKeys[rocket.key_identifier[key]] = key
+      end
+  end
+end
+
 function CirclemenuSkeleton(num_items)
 	local rml = '<button class="cancelButton" onClick="document:Hide()">Cancel</button>'
 	local radius_em = 10
@@ -92,6 +111,13 @@ end
 function CirclemenuHandleKey(event, document, num_handler)
 	local key = event.parameters["key_identifier"]
 	local index
+
+	if CirclemenuKeyCount[key] ~= nil then
+		CirclemenuKeyCount[key]["count"] = CirclemenuKeyCount[key]["count"]+1
+	else
+		CirclemenuKeyCount[key] = {count=1,clicks=1}
+	end
+
 	if key == rocket.key_identifier["0"] then
 		index = 10
 	elseif key >= rocket.key_identifier["1"] and key <= rocket.key_identifier["9"] then
@@ -101,6 +127,29 @@ function CirclemenuHandleKey(event, document, num_handler)
 		return
 	end
 	num_handler(index, event)
+end
+
+function CirclemenuHandleKeyUp(event, document)
+  local settings = tonumber(Cvar.get("cg_closeCircleMenu"))
+  local key = event.parameters["key_identifier"]
+  local keycount = CirclemenuKeyCount[key]
+
+  if CirclemenuKeyCount[key] == nil then
+    CirclemenuKeyCount[key] = {count=0,clicks=1}
+  end
+
+  local isCirclemenuKey = CirclemenuKeys[key] ~= nil
+  local clicks = CirclemenuKeyCount[key]["clicks"]
+
+  if settings == 1 and isCirclemenuKey and clicks > 1 then
+    document:Hide()
+  end
+
+  if settings == 2 and isCirclemenuKey then
+    document:Hide()
+  end
+  CirclemenuKeyCount[key]["count"] = 0
+  CirclemenuKeyCount[key]["clicks"] = CirclemenuKeyCount[key]["clicks"]+1
 end
 
 function welcome(event, document)
