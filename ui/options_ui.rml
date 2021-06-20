@@ -7,7 +7,15 @@
 	<body id="options_ui" template="window" style="width: 32em; margin: 1em;">
 		<h1> User Interface </h1>
 
-
+		<row>
+			<h3>Circlemenu Open/Close</h3>
+			<select name="cg_closeCircleMenu" cvar="cg_closeCircleMenu">
+				<option value="0">Close with Buttons only</option>
+				<option value="1">Toggle with key</option>
+				<option value="2">Hold key to stay open</option>
+			</select>
+			<p> Does not affect building menus </p>
+		</row>
 
 		<row>
 			<h3>Real-time clock</h3>
