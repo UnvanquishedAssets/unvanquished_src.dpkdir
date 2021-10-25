@@ -9,6 +9,10 @@ selector
 		}
 	}
 
+	condition ( percentHealth( E_SELF ) <= 0.5 && haveUpgrade( UP_MEDKIT ) )
+	{
+		action activateUpgrade( UP_MEDKIT )
+	}
 	behavior unstick
 
 	sequence
