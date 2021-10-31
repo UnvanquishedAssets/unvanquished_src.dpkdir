@@ -38,7 +38,9 @@ selector
 					}
 					sequence
 					{
-						condition ( healScore <= 0.5 && percentHealth( E_GOAL ) > 0.3  && random > 0.3 )
+						condition ( healScore <= 0.5 && percentHealth( E_GOAL ) > 0.3 )
+						condition cvar("g_bot_heal")
+						condition random > 0.3
 						action heal
 					}
 				}
@@ -54,6 +56,7 @@ selector
 		{
 			condition team == TEAM_ALIENS
 			condition healScore <= 0.25
+			condition cvar("g_bot_heal")
 			action heal
 		}
 
@@ -62,6 +65,7 @@ selector
 			condition team == TEAM_HUMANS
 			condition !haveUpgrade( UP_MEDKIT )
 			condition healScore <= 0.25
+			condition cvar("g_bot_heal")
 			action heal
 		}
 	}
@@ -79,6 +83,7 @@ selector
 		condition team == TEAM_HUMANS
 		condition !teamateHasWeapon( WP_HBUILD )
 		condition buildingIsDamaged
+		condition cvar("g_bot_repair")
 		decorator timer( 50000 )
 		{
 			selector
@@ -101,8 +106,11 @@ selector
 		action equip
 	}
 
-	condition baseRushScore > 0.5
+	sequence
 	{
+		condition cvar("g_bot_rush")
+		condition cvar("g_bot_attackStruct") // rushing doesn't make much sense if you are not allowed to attack buildables
+		condition baseRushScore > 0.5
 		action rush
 	}
 
