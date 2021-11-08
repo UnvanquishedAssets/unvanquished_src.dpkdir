@@ -1,23 +1,19 @@
 selector
 {
-	sequence
+	condition alertedToEnemy
 	{
-		condition alertedToEnemy
 		selector
 		{
 			decorator timer( 1000 )
 			{
 				selector
 				{
-					sequence
+					condition ( distanceTo( E_A_OVERMIND ) <= 100 || distanceTo( E_A_BOOSTER ) <= 100 )
 					{
-						condition alertedToEnemy
-						condition ( distanceTo( E_A_OVERMIND ) <= 100 || distanceTo( E_A_BOOSTER ) <= 100 )
 						action fight
 					}
-					sequence
+					condition ( healScore > 0.5 && percentHealth( E_GOAL ) > 0.3  && random > 0.3 )
 					{
-						condition ( healScore > 0.5 && percentHealth( E_GOAL ) > 0.3  && random > 0.3 )
 						action heal
 					}
 				}
@@ -27,13 +23,9 @@ selector
 		}
 	}
 
-	selector
+	condition healScore > 0.25
 	{
-		sequence
-		{
-			condition healScore > 0.25
-			action heal
-		}
+		action heal
 	}
 
 	condition ( aliveTime > 1500 )

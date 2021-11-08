@@ -2,9 +2,8 @@ selector
 {
 	behavior use_medkit
 
-	sequence
+	condition ( alertedToEnemy )
 	{
-		condition alertedToEnemy
 		selector
 		{
 			condition haveWeapon( WP_HBUILD ) && ( !buildingIsDamaged || teamateHasWeapon( WP_HBUILD ) )
@@ -18,13 +17,9 @@ selector
 
 			decorator timer( 1000 )
 			{
-				selector
+				condition ( healScore > 0.5 && percentHealth( E_GOAL ) > 0.3  && random > 0.3 )
 				{
-					sequence
-					{
-						condition ( healScore > 0.5 && percentHealth( E_GOAL ) > 0.3  && random > 0.3 )
-						action heal
-					}
+					action heal
 				}
 			}
 
@@ -32,20 +27,13 @@ selector
 		}
 	}
 
-	selector
+	condition ( !haveUpgrade( UP_MEDKIT ) && healScore > 0.25 )
 	{
-		sequence
-		{
-			condition !haveUpgrade( UP_MEDKIT )
-			condition healScore > 0.25
-			action heal
-		}
+		action heal
 	}
 
-	sequence
+	condition ( !teamateHasWeapon( WP_HBUILD ) && buildingIsDamaged )
 	{
-		condition !teamateHasWeapon( WP_HBUILD )
-		condition buildingIsDamaged
 		decorator timer( 50000 )
 		{
 			selector
