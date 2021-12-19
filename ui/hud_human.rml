@@ -147,6 +147,18 @@
 
 
 			}
+			sprinting.running.inactive img.stamina{
+				display: block;
+			}
+			sprinting.running.active img.stamina{
+				display: none;
+			}
+			sprinting.onsprint.inactive img.stamina{
+				display: none;
+			}
+			sprinting.onsprint.active img.stamina{
+				display: block;
+			}
 			health.health, health_cross{
 				color:#ff6562ff;
 			}
@@ -271,7 +283,12 @@
 		</div>
 		<div id="bars">
 			<div class="stamina">
-				<img class="stamina" src="/ui/assets/human/stamina"/>
+				<sprinting class="running">
+					<img class="stamina" src="/ui/assets/human/run"/>
+				</sprinting>
+				<sprinting class="onsprint">
+					<img class="stamina" src="/ui/assets/human/sprint"/>
+				</sprinting>
 				<progressbar class="stamina" src="stamina" />
 			</div>
 			<div class="health"><health_cross class="health"/>
