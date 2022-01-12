@@ -32,6 +32,12 @@ selector
 		}
 	}
 
+	// aliens should only try to do opportunistic resupply for poison, or they will end up camping too much
+	condition resupplyScore > 0.95
+	{
+		action resupply
+	}
+
 	selector
 	{
 		sequence

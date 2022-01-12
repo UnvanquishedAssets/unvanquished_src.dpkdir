@@ -82,6 +82,17 @@ selector
 		}
 	}
 
+	condition ( percentAmmoClip < 0.25 && percentClips > 0.25 )
+	{
+		action reload
+	}
+
+	// this is a really naive implementation, as more parameters should be considered before going back to base for resupply
+	condition resupplyScore > 0.80
+	{
+		action resupply
+	}
+
 	sequence
 	{
 		condition !teamateHasWeapon( WP_HBUILD )
