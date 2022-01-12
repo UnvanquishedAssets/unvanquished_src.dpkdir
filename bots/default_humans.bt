@@ -82,7 +82,7 @@ selector
 		}
 	}
 
-	condition ( percentAmmoClip < 0.25 && percentClips > 0.25 )
+	condition ( percentAmmoClip < 0.67 && percentClips > 0.25 )
 	{
 		action reload
 	}
