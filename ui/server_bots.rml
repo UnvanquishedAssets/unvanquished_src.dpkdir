@@ -118,6 +118,7 @@
 				<row>
 					<input cvar="g_bot_radar" type="checkbox" />
 					<h3> Radar </h3>
+					<input cvar="g_bot_radarRatio" type="range" min="0" max="100" step="1">
 				</row>
 
 			</panel>
