@@ -12,7 +12,7 @@ selector
 	}
 
 
-	condition(stuckTime > 10000)
+	condition(stuckTime > 5000)
 	{
 		selector
 		{
@@ -21,22 +21,22 @@ selector
 				action suicide
 			}
 
-			decorator timer(3000)
+			decorator timer(1500)
 			{
 				decorator return(STATUS_FAILURE)
 				{
 					action jump
 				}
 			}
-			condition(stuckTime > 17500)
+			condition(stuckTime > 9000)
 			{
 				action moveInDir(MOVE_FORWARD)
 			}
-			condition(stuckTime > 15000)
+			condition(stuckTime > 7000)
 			{
 				action moveInDir(MOVE_RIGHT)
 			}
-			condition(stuckTime > 12500)
+			condition(stuckTime > 6000)
 			{
 				action moveInDir(MOVE_BACKWARD)
 			}
