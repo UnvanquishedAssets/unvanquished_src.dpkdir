@@ -82,17 +82,6 @@ selector
 		}
 	}
 
-	condition ( percentAmmoClip < 0.67 && percentClips > 0.25 )
-	{
-		action reload
-	}
-
-	// this is a really naive implementation, as more parameters should be considered before going back to base for resupply
-	condition resupplyScore > 0.80
-	{
-		action resupply
-	}
-
 	sequence
 	{
 		condition !teamateHasWeapon( WP_HBUILD )
@@ -121,12 +110,34 @@ selector
 		}
 	}
 
-	action equip
-
-	condition baseRushScore > 0.5
+	// select long-term goal, but make sure it does not prevent
+	// preparing for next encounter (by reloading if desired)
+	concurrent
 	{
-		action rush
-	}
+		selector
+		{
+			// this is a really naive implementation, as more
+			// parameters should be considered before going back to
+			// base for resupply, but this is a good enough start
+			// for a new feature.
+			condition resupplyScore > 0.80
+			{
+				action resupply
+			}
 
-	action roam
+			action equip
+
+			condition baseRushScore > 0.5
+			{
+				action rush
+			}
+
+			action roam
+		}
+
+		condition ( percentAmmoClip < 0.67 && percentClips > 0.25 )
+		{
+			action reload
+		}
+	}
 }
