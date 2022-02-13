@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458334"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="use.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="7.2466938"
+     inkscape:cx="37.189373"
+     inkscape:cy="46.296975"
+     inkscape:window-width="1920"
+     inkscape:window-height="1022"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1160"
+       originx="-68.146354"
+       originy="-98.300738" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter4898"
+       x="-0.065789479"
+       y="-0.065789479"
+       width="1.131579"
+       height="1.131579">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood4888" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite4890" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="2.5"
+         result="blur"
+         id="feGaussianBlur4892" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset4894" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite4896" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-68.146355,-98.300735)">
+    <path
+       id="path4306"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00000002;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 50 2.5 A 47.499998 47.499998 0 0 0 2.5 50 A 47.499998 47.499998 0 0 0 50 97.5 A 47.499998 47.499998 0 0 0 97.5 50 A 47.499998 47.499998 0 0 0 50 2.5 z M 42.681641 11.664062 C 44.278487 11.660702 45.211656 11.867971 45.882812 12.753906 C 46.641107 13.754876 54.006375 43.099574 54.640625 44.246094 C 55.274868 45.392576 56.469075 45.392506 56.859375 45.34375 C 57.249687 45.294956 57.542769 45.221507 58.494141 43.806641 C 59.445508 42.391774 59.714599 17.656809 60.617188 15.949219 C 61.519769 14.241477 63.006378 13.851779 64.835938 13.998047 C 66.665497 14.14439 67.997939 15.994771 68.226562 17.728516 C 68.45477 19.45901 67.105572 42.953088 67.251953 46.490234 C 67.398312 50.027381 68.90988 49.904751 69.763672 50.441406 C 70.617463 50.978099 70.836491 50.63623 71.519531 50.050781 C 72.20256 49.465295 76.092433 40.51806 77.886719 37 C 79.022127 34.773783 79.741525 33.899018 81.351562 33.902344 C 82.997396 33.905745 85.156651 35.439211 85.644531 36.292969 C 86.132404 37.146802 86.790997 38.878591 85.546875 40.878906 C 84.624549 42.361842 77.008211 56.711563 76.300781 58.6875 C 75.593352 60.663437 75.008138 75.934081 74.203125 78.910156 C 73.398116 81.88627 72.47142 82.349714 69.763672 84.837891 C 67.05592 87.326105 60.518298 88.22866 59.005859 88.326172 C 57.493429 88.423721 56.542928 87.886127 55.298828 87.154297 C 54.054729 86.422467 50.88341 85.155623 49.224609 85.570312 C 47.565809 85.984927 45.955771 86.228082 44.443359 85.935547 C 42.930902 85.642898 41.419089 84.081264 40.394531 83.154297 C 39.369981 82.22733 32.538705 75.128418 29.708984 73.347656 C 26.879267 71.566894 24.158801 71.811026 21.462891 70.810547 C 19.305521 70.00993 16.46457 69.082906 14.414062 67.445312 C 13.613237 66.805741 13.609688 64.346052 14 63.589844 C 14.3903 62.833636 15.145849 62.420129 16.755859 61.517578 C 18.365878 60.614989 20.317375 60.101418 22.683594 60.003906 C 25.049824 59.906319 29.09973 62.468469 31.636719 64.517578 C 34.1737 66.566649 37.824925 66.428699 39.150391 66.201172 C 40.249126 66.012498 41.027447 65.493129 41.173828 64.273438 C 41.305934 63.172537 39.864803 57.169486 38.880859 55.929688 C 37.661157 54.392818 18.537857 40.42918 17.097656 36.146484 C 16.170682 33.389962 16.613483 32.268416 18.052734 30.902344 C 19.491994 29.536196 22.342326 30.072552 23.683594 30.853516 C 25.283097 31.784867 38.319833 43.41713 41.320312 45.978516 C 44.320792 48.539901 45.22425 48.344591 45.980469 48.125 C 46.73668 47.905447 46.808663 47.270438 46.90625 46.001953 C 47.00383 44.733468 39.319511 23.364782 38.34375 20.4375 C 37.367967 17.51018 37.490111 13.583251 38.539062 12.705078 C 39.588014 11.827094 39.905534 11.737388 41.957031 11.675781 C 42.213468 11.668071 42.45352 11.664543 42.681641 11.664062 z "
+       transform="matrix(0.26458333,0,0,0.26458333,68.146355,98.300735)"
+       inkscape:export-filename="/media/stela/My Passport/unvanquished assets/ui/neutral/without_shadows/use.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
