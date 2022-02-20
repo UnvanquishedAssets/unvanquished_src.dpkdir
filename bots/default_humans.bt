@@ -71,6 +71,13 @@ selector
 			{
 				action resetStuckTime
 				action fight
+				decorator return( STATUS_SUCCESS )
+				{
+					condition goalType == ET_BUILDABLE && goalTeam == TEAM_ALIENS && inAttackRange( E_GOAL )
+					{
+						action moveInDir( MOVE_BACKWARD )
+					}
+				}
 			}
 		}
 	}
