@@ -1,6 +1,8 @@
 // Subroutine to try to prevent bots from getting stuck
 // There is 2 parts, one from 3 to 5 seconds, and the second part to 7 to 15 seconds.
 // Still WIP
+// In thhe first part, the bot will try shorter movements to unstick, and, also try to go around after some steps. In many times this is enought to unstick.
+// In the check around sequence, if there is enemy nearby, to bot will try to defend hiself. If around is quiet, the bot will try to unstick again. If, after long time without success, the bot will suicide.
 selector
 {
 	decorator return( STATUS_FAILURE )
@@ -14,9 +16,7 @@ selector
 	}
 
 	
-			/* **********************************
-			*************************************
-			********************************** */
+			/* ******* */
 			
 condition(stuckTime > 7000)
 {
@@ -26,7 +26,6 @@ condition(stuckTime > 7000)
 		{
 			action suicide
 		}
-		
 		
 		decorator timer(3000)
 		{
@@ -46,7 +45,7 @@ condition(stuckTime > 7000)
 			}
 		}
 		
-		decorator timer(600)
+		decorator timer(300)
 		{
 			decorator return(STATUS_FAILURE)
 			{
@@ -55,7 +54,7 @@ condition(stuckTime > 7000)
 				condition distanceTo( E_ENEMY ) <= 300
 				sequence
 					{
-					//	action say("Enemy nearby (0.6sec) -> Reset Time", SAY_ALL)
+					//	action say("Enemy nearby (0.3sec) -> Reset Time", SAY_ALL)
 						action resetStuckTime
 						action fight
 					}
@@ -66,69 +65,10 @@ condition(stuckTime > 7000)
 		
 		
 		condition(stuckTime > 12700)
-		sequence
-				{
-					// action say("Long stuck", SAY_ALL)
-					/* ###################### R4 ###################### */
-					selector
-					{
-					// condition (alertedToEnemy && distanceTo( E_ENEMY ) < 600)
-					condition (distanceTo( E_ENEMY ) < 100 && isvisible( E_ENEMY ) && inAttackRange( E_ENEMY ))
-					sequence {
-					//	action say("stucktime R4 + Enemy nearby AAARRRGGGHHH ####################", SAY_ALL)
-						selector
-						{
-							condition haveWeapon( WP_HBUILD ) && ( !buildingIsDamaged || teamateHasWeapon( WP_HBUILD ) )
-							{
-								selector
-								{
-								//	action say("stucktime R4 + Enemie proche = EQUIP + FLEE", SAY_ALL)
-								//	action resetStuckTime
-									action equip
-									action jump
-									action flee
-								}
-							}
-							// action say("stucktime R4 + Enemie proche", SAY_ALL)
-							/* sequence
-							{
-								condition isvisible( E_ENEMY ) && inAttackRange( E_ENEMY )
-								condition team == TEAM_ALIENS
-								condition ( distanceTo( E_A_OVERMIND ) >= 100 || distanceTo( E_A_BOOSTER ) >= 100 )
-								 //action say("stucktime R4 + Enemie proche = FIGHT", SAY_ALL)
-								action jump
-								action fight
-							} */
-							sequence
-							{
-								condition ( healScore <= 0.5 && percentHealth( E_GOAL ) > 0.3 )
-								sequence
-									{
-									//	action say("stucktime R4 + Enemie proche + Bad Health = HEAL", SAY_ALL)
-										// action resetStuckTime
-										action jump
-										action heal
-									}
-							}
-							sequence
-							{
-								//	action say("stucktime R4 + Enemie proche = FIGHT", SAY_ALL)
-								//	action resetStuckTime
-									action jump
-									action fight
-							}
-						}
-					}
-					sequence
-					{
-					//	action say("Long stuck R4 -> roam", SAY_ALL)
-						action jump
-						action roam // May be should be the old objective, but don't know how to do.
-					}
-			}
-			/* ############################################## */
+		{
+			// I would like a test with 100, but keep simple for the moment
+			behavior unstickcheckaround
 		}
-		
 		condition(stuckTime > 12500)
 		{
 			action moveInDir(MOVE_FORWARD)
@@ -142,122 +82,60 @@ condition(stuckTime > 7000)
 			action moveInDir(MOVE_BACKWARD)
 		}
 		condition(stuckTime > 7900)
-		sequence
-				{
-
-					// action say("Long stuck", SAY_ALL)
-					/* ###################### R3 ##################### */
-					selector
-					{
-					condition (alertedToEnemy && distanceTo( E_ENEMY ) < 600 && isvisible( E_ENEMY ) && inAttackRange( E_ENEMY ))
-					selector
-					{
-						// action say("stucktime R3 + Enemy nearby", SAY_ALL)
-						condition haveWeapon( WP_HBUILD ) && ( !buildingIsDamaged || teamateHasWeapon( WP_HBUILD ) )
-						{
-							selector
-							{
-						//		action say("stucktime R3 + Enemie proche = EQUIP + FLEE", SAY_ALL)
-								action equip
-								action jump
-								action flee
-							}
-						}
-						// action say("stucktime R3 + Enemie proche", SAY_ALL)
-						/* sequence
-						{
-							condition isvisible( E_ENEMY ) && inAttackRange( E_ENEMY )
-							condition team == TEAM_ALIENS
-							condition ( distanceTo( E_A_OVERMIND ) >= 100 || distanceTo( E_A_BOOSTER ) >= 100 )
-						//	action say("stucktime R3 + Enemie proche = FIGHT", SAY_ALL)
-							action jump
-							action fight
-						} */
-						sequence
-						{
-							condition ( healScore <= 0.5 && percentHealth( E_GOAL ) > 0.3 )
-							sequence
-								{
-							//		action say("stucktime R3 + Enemie proche + Bad Health = HEAL", SAY_ALL)
-									action jump
-									action heal
-								}
-						}
-						sequence
-						{
-						//		action say("stucktime R3 + Enemie proche = FIGHT", SAY_ALL)
-								action jump
-								action fight
-						}
-					}
-					sequence
-					{
-					//	action say("Long stuck R3 -> roam", SAY_ALL)
-						action jump
-						action roam // May be should be the old objective, but don't know how to do.
-					}
-			}
-			/* ############################################## */
-		}
-			condition(stuckTime > 7700)
-			{
-				sequence
-				{
-				//	action say("stucktime 23 LEFT", SAY_ALL)
-					action moveInDir(MOVE_LEFT)
-				}
-			}	
-			
-			condition(stuckTime > 7500)
-			{
-				sequence
-				{
-				//	action say("stucktime 22 FORWARD", SAY_ALL)
-					action moveInDir(MOVE_FORWARD)
-				}
-			}			
-			condition(stuckTime > 7400)
-			{
-				sequence
-				{
-				//	action say("stucktime 21 LEFT", SAY_ALL)
-					action moveInDir(MOVE_LEFT)
-				}
-			}
-			
-			
-			condition(stuckTime > 7300)
-			{
-				sequence
-				{
-				//	action say("stucktime 20 BACK", SAY_ALL)
-					action moveInDir(MOVE_BACKWARD)
-				}
-			}
-			condition(stuckTime > 7200)
-			{
-				sequence
-				{
-				//	action say("stucktime 19 RIGHT", SAY_ALL)
-					action moveInDir(MOVE_RIGHT)
-				}
-			}
-		
-		
-		sequence
 		{
-		//	action say("STUCK", SAY_ALL)
-			action moveInDir(MOVE_LEFT)
-			action moveTo(E_SELF) // cancel old target which may be causing the bot to walk into a wall, etc.
+			// I would like a test with 600, but keep simple for the moment
+			behavior unstickcheckaround
+		}
+		condition(stuckTime > 7700)
+		{
+			sequence
+			{
+			//	action say("stucktime 23 LEFT", SAY_ALL)
+				action moveInDir(MOVE_LEFT)
+			}
+		}	
+		
+		condition(stuckTime > 7500)
+		{
+			sequence
+			{
+			//	action say("stucktime 22 FORWARD", SAY_ALL)
+				action moveInDir(MOVE_FORWARD)
+			}
+		}			
+		condition(stuckTime > 7400)
+		{
+			sequence
+			{
+			//	action say("stucktime 21 LEFT", SAY_ALL)
+				action moveInDir(MOVE_LEFT)
+			}
+		}
+		condition(stuckTime > 7300)
+		{
+			sequence
+			{
+			//	action say("stucktime 20 BACK", SAY_ALL)
+				action moveInDir(MOVE_BACKWARD)
+			}
+		}
+		condition(stuckTime > 7200)
+		{
+			sequence
+			{
+			//	action say("stucktime 19 RIGHT", SAY_ALL)
+				action moveInDir(MOVE_RIGHT)
+			}
+		}
+		sequence
+				{
+				// I would like a test with 400 and the shorter test, but keep simple for the moment
+				behavior unstickcheckaround
 		}
 	}
 }
 
 
-			/* **********************************
-			*************************************
-			********************************** */
-			
 
 
 // This is the quick unstuck start at 3 seconds to 5 seconds, without suicide
@@ -267,62 +145,9 @@ condition(stuckTime > 7000)
 		{
 			condition(stuckTime > 5000)
 			{
-			/* #################### R2 ####################### */
-				sequence
-				{
-					// action say("stucktime R2 ", SAY_ALL)
-					selector
-					{
-					condition (alertedToEnemy && distanceTo( E_ENEMY ) < 300)
-						selector
-						{
-							// action say("stucktime long + ALERTED", SAY_ALL)
-							condition haveWeapon( WP_HBUILD ) && ( !buildingIsDamaged || teamateHasWeapon( WP_HBUILD ) )
-							{
-								selector
-								{
-							//		action say("stucktime R2 + Enemie proche = EQUIP + FLEE", SAY_ALL)
-									action equip
-									action flee
-								}
-							}
-							// action say("stucktime R2 + Enemie proche", SAY_ALL)
-							/* sequence
-							{
-								condition isvisible( E_ENEMY ) && inAttackRange( E_ENEMY )
-								condition team == TEAM_ALIENS
-								condition ( distanceTo( E_A_OVERMIND ) >= 100 || distanceTo( E_A_BOOSTER ) >= 100 )
-							//	action say("stucktime long + Enemie proche = FIGHT", SAY_ALL)
-								action fight
-							} */
-							sequence
-							{
-								condition ( healScore <= 0.5 && percentHealth( E_GOAL ) > 0.3 )
-								sequence
-									{
-								//		action say("stucktime R2 + Enemie proche + Bad Health = HEAL", SAY_ALL)
-										action heal
-									}
-							}
-							sequence
-							{
-								//	action say("stucktime R2 + Enemie proche = FIGHT", SAY_ALL)
-									action fight
-							}
-						}
-					sequence
-					{
-					//	action say("stuck R 2 ->  roam", SAY_ALL)
-						action roam
-					}
-					}
-				}
-				/* ############################################## */
+				// I would like a test with 300 and the shorter test, but keep simple for the moment
+				behavior unstickcheckaround
 			}
-
-			/* **********************************
-			*************************************
-			********************************** */
 			
 			// Not same values, shorter timer
 			decorator timer(1500)
@@ -338,7 +163,7 @@ condition(stuckTime > 7000)
 			}
 			
 			
-		decorator timer(600)
+		decorator timer(300)
 		{
 			decorator return(STATUS_FAILURE)
 			{
@@ -347,7 +172,7 @@ condition(stuckTime > 7000)
 				condition distanceTo( E_ENEMY ) <= 300
 				sequence
 					{
-					//	action say("Enemy nearby crt (0.6 sec) - R1 -> Reset Time", SAY_ALL)
+					//	action say("Enemy nearby crt (0.3 sec) -> Reset Time", SAY_ALL)
 						action resetStuckTime
 						action fight
 					}
@@ -355,9 +180,9 @@ condition(stuckTime > 7000)
 			}
 		}
 		
+		// Short steps tring to unstick (sequence 1 to 17)
 		
-		
-		/* Désactivé pour avoir vérifier les décoratuers, sinon > 20 limit 
+			/* Inactivated for some tests because there is a limit for 20 children for selectors 
 			condition(stuckTime > 4600)
 			{
 				sequence
@@ -366,7 +191,7 @@ condition(stuckTime > 7000)
 					action moveInDir(MOVE_RIGHT)
 				}
 			}
-	*/
+			*/
 			condition(stuckTime > 4500)
 			{
 				sequence
@@ -383,7 +208,6 @@ condition(stuckTime > 7000)
 					action moveInDir(MOVE_LEFT)
 				}
 			}
-			
 			condition(stuckTime > 4300)
 			{
 				sequence
@@ -392,7 +216,6 @@ condition(stuckTime > 7000)
 					action moveInDir(MOVE_LEFT)
 				}
 			}
-			
 			condition(stuckTime > 4200)
 			{
 				sequence
@@ -441,8 +264,6 @@ condition(stuckTime > 7000)
 					action moveInDir(MOVE_LEFT)
 				}
 			}
-			
-			
 			condition(stuckTime > 3700)
 			{
 				sequence
@@ -459,8 +280,6 @@ condition(stuckTime > 7000)
 					action moveInDir(MOVE_LEFT)
 				}
 			}
-
-			
 			condition(stuckTime > 3500)
 			{
 				sequence
@@ -477,8 +296,6 @@ condition(stuckTime > 7000)
 					action moveInDir(MOVE_LEFT)
 				}
 			}
-			
-			
 			condition(stuckTime > 3300)
 			{
 				sequence
@@ -495,7 +312,6 @@ condition(stuckTime > 7000)
 					action moveInDir(MOVE_RIGHT)
 				}
 			}
-			
 			condition(stuckTime > 3100)
 			{
 				sequence
@@ -504,59 +320,13 @@ condition(stuckTime > 7000)
 					action moveInDir(MOVE_BACKWARD)
 				}
 			}
-			/* ###################### R1 ###################### */
+			
 			sequence
-			{
-				condition (alertedToEnemy && distanceTo( E_ENEMY ) < 200)
-				sequence
 				{
-			//	action say("stucktime R1  : Enemy visible and In Range", SAY_ALL)
-				selector
-					{
-						condition haveWeapon( WP_HBUILD ) && ( !buildingIsDamaged || teamateHasWeapon( WP_HBUILD ) )
-						{
-							selector
-							{
-						//		action say("stucktime R1 + Enemie proche = EQUIP + FLEE", SAY_ALL)
-								action equip
-								action jump
-								action flee
-							}
-						}
-						//action say("stucktime R1 + Enemie proche", SAY_ALL)
-						/* sequence
-						{
-							condition isvisible( E_ENEMY ) && inAttackRange( E_ENEMY )
-							condition team == TEAM_ALIENS
-							condition ( distanceTo( E_A_OVERMIND ) >= 100 || distanceTo( E_A_BOOSTER ) >= 100 )
-						//	action say("stucktime R1 + Enemie proche = FIGHT", SAY_ALL)
-							action jump
-							action fight
-						} */
-						sequence
-						{
-							condition ( healScore <= 0.5 && percentHealth( E_GOAL ) > 0.3 )
-							sequence
-								{
-							//		action say("stucktime R1 + Enemie proche + Bad Health = HEAL", SAY_ALL)
-									action jump
-									action heal
-								}
-						}
-						sequence
-							{
-						//		action say("stucktime R1 + Enemie proche = FIGHT", SAY_ALL)
-								action jump
-								action fight
-							}
-					}
+				// I would like a test with 200 and the shorter test, but keep simple for the moment
+				behavior unstickcheckaround
 				}
-				// action say("stucktime R1 and No enemy close", SAY_ALL)
-				action jump
-				action moveInDir(MOVE_RIGHT)
-				action moveTo(E_SELF) // cancel old target which may be causing the bot to walk into a wall, etc.
 			}
-			/* ############################################## */
 		}
 	}
 }
