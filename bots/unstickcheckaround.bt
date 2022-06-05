@@ -1,51 +1,65 @@
-selector
-{
-	condition (distanceTo( E_ENEMY ) < 500 && isvisible( E_ENEMY ) && inAttackRange( E_ENEMY ))
-	{
-		sequence 
-		{
-			condition haveWeapon( WP_HBUILD ) && ( !buildingIsDamaged || teamateHasWeapon( WP_HBUILD ) )
-			{
-				selector
-				{
-					condition(stuckTime < 12700)
-						{
+selector {
+	condition (distanceTo( E_ENEMY ) < 500 && isvisible( E_ENEMY ) && inAttackRange( E_ENEMY )) {
+		selector { // IF the bot have the CT and... needn't, he will jump, and equip.
+			condition haveWeapon( WP_HBUILD ) && ( !buildingIsDamaged || teamateHasWeapon( WP_HBUILD ) ) {
+				selector {
+					condition(stuckTime < 12700) {
+						sequence {
 							action resetStuckTime
+							action jump
+							action equip
 						}
-					action equip
+					}
+					sequence {
+						action jump
+						action equip
+					}
+				}
+			}
+			condition ( healScore <= 0.5 && percentHealth( E_GOAL ) > 0.3 ) {
+				selector {
+					condition(stuckTime < 12700) {
+						sequence {
+							action resetStuckTime
+							action jump
+							action heal
+						}
+					}
+					sequence {
+						action jump
+						action heal
+					}
+				}
+			}
+			selector {
+				condition(stuckTime < 12700) {
+				sequence {
+					action resetStuckTime
 					action jump
-					action flee
+					action fight
+					}
 				}
-			}
-			condition ( healScore <= 0.5 && percentHealth( E_GOAL ) > 0.3 )
-			sequence
-			{
-				condition(stuckTime < 12700)
-				{
-					action resetStuckTime
+				sequence {
+					action jump
+					action fight
 				}
-				action jump
-				action heal
-			}
-			sequence
-			{
-				condition(stuckTime < 12700)
-				{
-					action resetStuckTime
-				}
-				action jump
-				action fight
 			}
 		}
 	}
-	sequence
-	{
-		action jump
-		condition(stuckTime < 3500) // Forget old target only on first steps for unstick, so, may was made once at least
-		{
-			action moveTo(E_SELF) // cancel old target which may be causing the bot to walk into a wall, etc.
+	decorator return(STATUS_FAILURE) {
+		selector {
+			sequence {
+				condition(stuckTime < 3500) { // Forget old target only on first steps for unstick, so, may was made once at least
+					sequence {
+						action moveTo(E_SELF) // cancel old target which may be causing the bot to walk into a wall, etc.
+						action jump
+						action roam // May be should be the old objective, but don't know how to do.
+					}
+				}
+			}
+			action jump
+			action roam // May be should be the old objective, but don't know how to do.
 		}
-		action roam // May be should be the old objective, but don't know how to do.
 	}
 }
 		
