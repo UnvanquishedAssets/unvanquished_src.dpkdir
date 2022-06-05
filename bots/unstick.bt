@@ -7,7 +7,7 @@ selector
 {
 	decorator return( STATUS_FAILURE )
 	{
-		// protect bots that are repairing from being considered stuck
+		// protect bots that are repairing from being considered stuck - May be should add the same for healing
 		sequence
 		{
 			condition haveWeapon( WP_HBUILD ) && distanceTo( E_GOAL ) <= 100 && percentHealth( E_GOAL ) < 1.0
@@ -15,130 +15,102 @@ selector
 		}
 	}
 
-	
-			/* ******* */
 			
-condition(stuckTime > 7000)
-{
-	selector
+	condition(stuckTime > 7000)
 	{
-		condition(stuckTime > 15000)
+		selector
 		{
-			action suicide
-		}
-		
-		decorator timer(3000)
-		{
-			decorator return(STATUS_FAILURE)
+			condition(stuckTime > 15000)
 			{
-			sequence
-					{
-				condition distanceTo( E_ENEMY ) <= 300
-				sequence
-					{
-					//	action say("Enemy nearby (3sec) -> Reset Time", SAY_ALL)
-						action resetStuckTime
-						action fight
-					}
-				action jump
-				}
+				action suicide
 			}
-		}
-		
-		decorator timer(300)
-		{
-			decorator return(STATUS_FAILURE)
+			
+			decorator timer(3000)
 			{
-			sequence
-					{
-				condition distanceTo( E_ENEMY ) <= 300
+				decorator return(STATUS_FAILURE)
+				{
 				sequence
 					{
-					//	action say("Enemy nearby (0.3sec) -> Reset Time", SAY_ALL)
-						action resetStuckTime
-						action fight
+						condition distanceTo( E_ENEMY ) <= 300
+						{
+						sequence
+							{
+								action resetStuckTime
+								action fight
+							}
+						}
+						action jump
 					}
 				}
 			}
-		}
-		
-		
-		
-		condition(stuckTime > 12700)
-		{
-			// I would like a test with 100, but keep simple for the moment
-			behavior unstickcheckaround
-		}
-		condition(stuckTime > 12500)
-		{
-			action moveInDir(MOVE_FORWARD)
-		}
-		condition(stuckTime > 10000)
-		{
-			action moveInDir(MOVE_RIGHT)
-		}
-		condition(stuckTime > 9000)
-		{
-			action moveInDir(MOVE_BACKWARD)
-		}
-		condition(stuckTime > 7900)
-		{
-			// I would like a test with 600, but keep simple for the moment
-			behavior unstickcheckaround
-		}
-		condition(stuckTime > 7700)
-		{
-			sequence
+			
+			decorator timer(300)
 			{
-			//	action say("stucktime 23 LEFT", SAY_ALL)
-				action moveInDir(MOVE_LEFT)
+				decorator return(STATUS_FAILURE)
+				{
+					condition distanceTo( E_ENEMY ) <= 300
+					{
+						sequence
+						{
+								action resetStuckTime
+								action fight
+						}
+					}
+				}
 			}
-		}	
-		
-		condition(stuckTime > 7500)
-		{
-			sequence
+			
+			
+			
+			condition(stuckTime > 12700)
 			{
-			//	action say("stucktime 22 FORWARD", SAY_ALL)
+				// I would like a test with 100, but keep simple for the moment
+				behavior unstickcheckaround
+			}
+			condition(stuckTime > 12500)
+			{
 				action moveInDir(MOVE_FORWARD)
 			}
-		}			
-		condition(stuckTime > 7400)
-		{
-			sequence
+			condition(stuckTime > 10000)
 			{
-			//	action say("stucktime 21 LEFT", SAY_ALL)
-				action moveInDir(MOVE_LEFT)
-			}
-		}
-		condition(stuckTime > 7300)
-		{
-			sequence
-			{
-			//	action say("stucktime 20 BACK", SAY_ALL)
-				action moveInDir(MOVE_BACKWARD)
-			}
-		}
-		condition(stuckTime > 7200)
-		{
-			sequence
-			{
-			//	action say("stucktime 19 RIGHT", SAY_ALL)
 				action moveInDir(MOVE_RIGHT)
 			}
-		}
-		sequence
-				{
-				// I would like a test with 400 and the shorter test, but keep simple for the moment
+			condition(stuckTime > 9000)
+			{
+				action moveInDir(MOVE_BACKWARD)
+			}
+			condition(stuckTime > 7900)
+			{
+				// I would like a test with 200, but keep simple for the moment
 				behavior unstickcheckaround
+			}
+			condition(stuckTime > 7700)
+			{
+				action moveInDir(MOVE_LEFT)
+			}	
+			
+			condition(stuckTime > 7500)
+			{
+					action moveInDir(MOVE_FORWARD)
+			}			
+			condition(stuckTime > 7400)
+			{
+				action moveInDir(MOVE_LEFT)
+			}
+			condition(stuckTime > 7300)
+			{
+				action moveInDir(MOVE_BACKWARD)
+			}
+			condition(stuckTime > 7200)
+			{
+				action moveInDir(MOVE_RIGHT)
+			}
+			// I would like a test with 400 and the shorter test, but keep simple for the moment
+			behavior unstickcheckaround
 		}
 	}
-}
 
 
-
-
-// This is the quick unstuck start at 3 seconds to 5 seconds, without suicide
+	// This is the quick unstuck start at 3 seconds to 5 seconds, without suicide
 	condition(stuckTime > 3000)
 	{
 		selector
@@ -154,11 +126,7 @@ condition(stuckTime > 7000)
 			{
 				decorator return(STATUS_FAILURE)
 				{
-					sequence
-					{
-					 // action say("stucktime R1 JUMP short", SAY_ALL)
-						action jump
-					}
+					action jump
 				}
 			}
 			
@@ -172,7 +140,6 @@ condition(stuckTime > 7000)
 				condition distanceTo( E_ENEMY ) <= 300
 				sequence
 					{
-					//	action say("Enemy nearby crt (0.3 sec) -> Reset Time", SAY_ALL)
 						action resetStuckTime
 						action fight
 					}
@@ -185,147 +152,75 @@ condition(stuckTime > 7000)
 			/* Inactivated for some tests because there is a limit for 20 children for selectors 
 			condition(stuckTime > 4600)
 			{
-				sequence
-				{
-				//	action say("stucktime 17 RIGHT", SAY_ALL)
-					action moveInDir(MOVE_RIGHT)
-				}
+				action moveInDir(MOVE_RIGHT)
 			}
 			*/
 			condition(stuckTime > 4500)
 			{
-				sequence
-				{
-				//	action say("stucktime 16 FORWARD", SAY_ALL)
-					action moveInDir(MOVE_FORWARD)
-				}
+				action moveInDir(MOVE_FORWARD)
 			}
 			condition(stuckTime > 4400)
 			{
-				sequence
-				{
-				//	action say("stucktime 15 LEFT", SAY_ALL)
-					action moveInDir(MOVE_LEFT)
-				}
+				action moveInDir(MOVE_LEFT)
 			}
 			condition(stuckTime > 4300)
 			{
-				sequence
-				{
-				//	action say("stucktime 14 FORWARD", SAY_ALL)
-					action moveInDir(MOVE_LEFT)
-				}
+				action moveInDir(MOVE_LEFT)
 			}
 			condition(stuckTime > 4200)
 			{
-				sequence
-				{
-				//	action say("stucktime 13 RIGHT", SAY_ALL)
-					action moveInDir(MOVE_LEFT)
-				}
+				action moveInDir(MOVE_LEFT)
 			}
 			condition(stuckTime > 4200)
 			{
-				sequence
-				{
-				//	action say("stucktime 12 BACKWARD", SAY_ALL)
-					action moveInDir(MOVE_BACKWARD)
-				}
+				action moveInDir(MOVE_BACKWARD)
 			}
 			condition(stuckTime > 4100)
 			{
-				sequence
-				{
-				//	action say("stucktime 11 FORWARD", SAY_ALL)
-					action moveInDir(MOVE_FORWARD)
-				}
+				action moveInDir(MOVE_FORWARD)
 			}
 			condition(stuckTime > 4000)
 			{
-				sequence
-				{
-				//	action say("stucktime 10 LEFT", SAY_ALL)
-					action moveInDir(MOVE_LEFT)
-				}
+				action moveInDir(MOVE_LEFT)
 			}
 			condition(stuckTime > 3900)
 			{
-				sequence
-				{
-				//	action say("stucktime 9 FORWARD", SAY_ALL)
-					action moveInDir(MOVE_FORWARD)
-				}
+				action moveInDir(MOVE_FORWARD)
 			}
 			condition(stuckTime > 3800)
 			{
-				sequence
-				{
-				//	action say("stucktime 8 LEFT", SAY_ALL)
-					action moveInDir(MOVE_LEFT)
-				}
+				action moveInDir(MOVE_LEFT)
 			}
 			condition(stuckTime > 3700)
 			{
-				sequence
-				{
-				//	action say("stucktime 7 BACKWARD", SAY_ALL)
-					action moveInDir(MOVE_BACKWARD)
-				}
+				action moveInDir(MOVE_BACKWARD)
 			}
 			condition(stuckTime > 3600)
 			{
-				sequence
-				{
-				//	action say("stucktime 6 LEFT", SAY_ALL)
-					action moveInDir(MOVE_LEFT)
-				}
+				action moveInDir(MOVE_LEFT)
 			}
 			condition(stuckTime > 3500)
 			{
-				sequence
-				{
-				//	action say("stucktime 5 FORWARD", SAY_ALL)
-					action moveInDir(MOVE_FORWARD)
-				}
+				action moveInDir(MOVE_FORWARD)
 			}			
 			condition(stuckTime > 3400)
 			{
-				sequence
-				{
-				//	action say("stucktime 4 LEFT", SAY_ALL)
-					action moveInDir(MOVE_LEFT)
-				}
+				action moveInDir(MOVE_LEFT)
 			}
 			condition(stuckTime > 3300)
 			{
-				sequence
-				{
-				//	action say("stucktime 3 BACK", SAY_ALL)
-					action moveInDir(MOVE_BACKWARD)
-				}
+				action moveInDir(MOVE_BACKWARD)
 			}
 			condition(stuckTime > 3200)
 			{
-				sequence
-				{
-				//	action say("stucktime 2 RIGHT", SAY_ALL)
-					action moveInDir(MOVE_RIGHT)
-				}
+				action moveInDir(MOVE_RIGHT)
 			}
 			condition(stuckTime > 3100)
 			{
-				sequence
-				{
-				//	action say("stucktime 1 BACK", SAY_ALL)
-					action moveInDir(MOVE_BACKWARD)
-				}
+				action moveInDir(MOVE_BACKWARD)
 			}
-			
-			sequence
-				{
-				// I would like a test with 200 and the shorter test, but keep simple for the moment
-				behavior unstickcheckaround
-				}
+			// I would like a test with 200 and the shorter test, but keep simple for the moment
+			behavior unstickcheckaround
 			}
 		}
 	}
