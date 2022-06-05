@@ -1,17 +1,13 @@
 selector
 {
-	// condition (alertedToEnemy && distanceTo( E_ENEMY ) < 600) // the shorter test
 	condition (distanceTo( E_ENEMY ) < 500 && isvisible( E_ENEMY ) && inAttackRange( E_ENEMY ))
-	// condition (distanceTo( E_ENEMY ) < 500 && isvisible( E_ENEMY ))
 	{
 		sequence 
 		{
-			// action say("stucktime and Enemy nearby sequence", SAY_ALL)
 			condition haveWeapon( WP_HBUILD ) && ( !buildingIsDamaged || teamateHasWeapon( WP_HBUILD ) )
 			{
 				selector
 				{
-					// action say("stucktime R + Enemy nearby = EQUIP + FLEE", SAY_ALL)
 					condition(stuckTime < 12700)
 						{
 							action resetStuckTime
@@ -24,7 +20,6 @@ selector
 			condition ( healScore <= 0.5 && percentHealth( E_GOAL ) > 0.3 )
 			sequence
 			{
-				// action say("stucktime R + Enemy nearby + Bad Health = HEAL", SAY_ALL)
 				condition(stuckTime < 12700)
 				{
 					action resetStuckTime
@@ -34,7 +29,6 @@ selector
 			}
 			sequence
 			{
-				//action say("stucktime R + Enemy nearby = FIGHT", SAY_ALL)
 				condition(stuckTime < 12700)
 				{
 					action resetStuckTime
@@ -46,15 +40,10 @@ selector
 	}
 	sequence
 	{
-		//action say("Stuck - check around : no enemy nearby in range or visible-> roam", SAY_ALL)
 		action jump
 		condition(stuckTime < 3500) // Forget old target only on first steps for unstick, so, may was made once at least
 		{
-			sequence
-			{
-				// action say("Stuck - R - Forget old target", SAY_ALL)
-				action moveTo(E_SELF) // cancel old target which may be causing the bot to walk into a wall, etc.
-			}
+			action moveTo(E_SELF) // cancel old target which may be causing the bot to walk into a wall, etc.
 		}
 		action roam // May be should be the old objective, but don't know how to do.
 	}
