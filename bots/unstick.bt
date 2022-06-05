@@ -25,16 +25,11 @@ selector
 				action suicide
 			}
 			
-			decorator timer(3000)
-			{
-				decorator return(STATUS_FAILURE)
-				{
-				sequence
-					{
-						condition distanceTo( E_ENEMY ) <= 300
-						{
-						sequence
-							{
+			decorator timer(3000) {
+				decorator return(STATUS_FAILURE) {
+					selector {
+						condition  distanceTo( E_ENEMY ) <= 300 {
+							sequence {
 								action resetStuckTime
 								action fight
 							}
@@ -44,23 +39,17 @@ selector
 				}
 			}
 			
-			decorator timer(300)
-			{
-				decorator return(STATUS_FAILURE)
-				{
-					condition distanceTo( E_ENEMY ) <= 300
-					{
-						sequence
-						{
-								action resetStuckTime
-								action fight
+			decorator timer(300) {
+				decorator return(STATUS_FAILURE) {
+					condition distanceTo( E_ENEMY ) <= 300 {
+						sequence {
+							action resetStuckTime
+							action fight
 						}
 					}
 				}
 			}
-			
-			
-			
+
 			condition(stuckTime > 12700)
 			{
 				// I would like a test with 100, but keep simple for the moment
@@ -131,22 +120,16 @@ selector
 			}
 			
 			
-		decorator timer(300)
-		{
-			decorator return(STATUS_FAILURE)
-			{
-			sequence
-					{
-				condition distanceTo( E_ENEMY ) <= 300
-				sequence
-					{
-						action resetStuckTime
-						action fight
+			decorator timer(300) {
+				decorator return(STATUS_FAILURE) {
+					condition distanceTo( E_ENEMY ) <= 300 {
+						sequence {
+							action resetStuckTime
+							action fight
+						}
 					}
 				}
 			}
-		}
-		
 		// Short steps tring to unstick (sequence 1 to 17)
 		
 			/* Inactivated for some tests because there is a limit for 20 children for selectors 
