@@ -1,21 +1,6 @@
 selector {
 	condition (distanceTo( E_ENEMY ) < 500 && isvisible( E_ENEMY ) && inAttackRange( E_ENEMY )) {
-		selector { // IF the bot have the CT and... needn't, he will jump, and equip.
-			condition haveWeapon( WP_HBUILD ) && ( !buildingIsDamaged || teamateHasWeapon( WP_HBUILD ) ) {
-				selector {
-					condition(stuckTime < 12700) {
-						sequence {
-							action resetStuckTime
-							action jump
-							action equip
-						}
-					}
-					sequence {
-						action jump
-						action equip
-					}
-				}
-			}
+		selector {
 			condition ( healScore <= 0.5 && percentHealth( E_GOAL ) > 0.3 ) {
 				selector {
 					condition(stuckTime < 12700) {
@@ -33,10 +18,10 @@ selector {
 			}
 			selector {
 				condition(stuckTime < 12700) {
-				sequence {
-					action resetStuckTime
-					action jump
-					action fight
+					sequence {
+						action resetStuckTime
+						action jump
+						action fight
 					}
 				}
 				sequence {
@@ -62,5 +47,3 @@ selector {
 		}
 	}
 }
-		
-	
