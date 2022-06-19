@@ -148,17 +148,21 @@
 				</row>
 				<row>
 					<keybind cmd='+deconstruct' />
-					<p>Mark structure for replacement:</p>
+					<p>Mark Structure for Replacement:</p>
 				</row>
 				<p>Hold the key to deconstruct structure.
 				</p>
 				<row>
 					<keybind cmd='beaconMenu' />
-					<p>Beacon menu:</p>
+					<p>Beacon Menu:</p>
 				</row>
 				<row>
 					<keybind cmd="<console>" />
-					<p>Toggle console:</p>
+					<p>Toggle Console:</p>
+				</row>
+				<row>
+					<keybind cmd="debuggerToogle" />
+					<p>Toggle RML Debugger:</p>
 				</row>
 				<row>
 					<keybind cmd="modcase SHIFT screenshotPNG screenshotJPEG" />
