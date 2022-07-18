@@ -60,6 +60,7 @@
 			end
 			function BuildBeaconMenu(document)
 				ClearBeaconInfo(document)
+				CirclemenuSetKeys(document)
 				if beacons == nil then
 					CDataSource.Build("beaconList", "default")
 					beacons = CDataSource.Read("beaconList", "default", "icon,name,desc")
@@ -75,7 +76,8 @@
 			end
 		</script>
 	</head>
-	<body id="ingame_beaconmenu" class="circlemenu" onkeydown="CirclemenuHandleKey(event, document, BeaconClick)" onshow="BuildBeaconMenu(document)">
+	<body id="ingame_beaconmenu" class="circlemenu" onkeydown="CirclemenuHandleKey(event, document, BeaconClick)"
+	 onkeyup="CirclemenuHandleKeyUp(event, document)" onshow="BuildBeaconMenu(document)">
 		<tabset class="circlemenu">
 			<tab>Beacons</tab>
 			<panel>
@@ -89,5 +91,6 @@
 				</div>
 			</panel>
 		</tabset>
+		<keybind id="circlemenu-binds" style="display:none;overflow:hidden;widht:0px;height:0px;" cmd="beaconMenu" />
 	</body>
 </rml>
