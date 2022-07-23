@@ -47,8 +47,7 @@ selector
 			condition team == TEAM_ALIENS
 			hysteresis 400 700 distanceTo(E_A_OVERMIND)
 			{
-				//action flee // broken
-				action moveTo( E_A_OVERMIND )
+				action flee
 			}
 		}
 	}
