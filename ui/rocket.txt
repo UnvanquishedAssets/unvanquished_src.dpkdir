@@ -34,6 +34,7 @@
 	misc
 	{
 		// ######## Custom section.  Add and remove freely ########
+		ui/welcome.rml
 		ui/options_player.rml
 		ui/options_fov.rml
 		ui/options_graphics.rml

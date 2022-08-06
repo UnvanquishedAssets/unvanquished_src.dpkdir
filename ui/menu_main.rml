@@ -47,6 +47,7 @@
 						<indent>
 							<blocklink onclick='Events.pushevent("show help_gameplay", event)'><translate>Gameplay guide</translate></blocklink>
 							<blocklink onclick='Events.pushevent("show help_textentry", event)'><translate>Colour codes and symbols</translate></blocklink>
+							<blocklink onclick='Events.pushevent("show welcome", event)'><translate>Changelog</translate></blocklink>
 						</indent>
 
 						<br />
