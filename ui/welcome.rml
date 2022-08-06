@@ -18,6 +18,7 @@
 			<panel>
 				<translate><h1>Welcome to Unvanquished.</h1></translate>
 				<translate><h2>Server and Game Information</h2></translate>
+				<include src="ui/gameinfo.rml"/>
 				<br />
 				<button onclick='Events.pushevent("hide welcome",event)'> OK </button>
 			</panel>
@@ -27,6 +28,7 @@
 			</tab>
 			<panel>
 				<translate><h1>Unvanquished Changelog</h1></translate>
+				<include src="ui/changelog.rml"/>
 				<br />
 				<button onclick='Events.pushevent("hide welcome",event)'> OK </button>
 			</panel>
