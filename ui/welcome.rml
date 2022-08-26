@@ -9,19 +9,38 @@
 		</style>
 	</head>
 	<body template="window" id="welcome" style="width:45em; margin: 1em;">
-		<h1>Welcome to Unvanquished</h1>
+		<h1>Dev Server Changelog</h1>
 		<tabset>
 			<tab>
 				<img class="emoticon" src="/emoticons/official" />
-				<translate>Welcome</translate>
+				<span>Changelog</span>
 			</tab>
 			<panel>
-				<translate>Welcome to Unvanquished</translate>
+				<h2>Gameplay Development Server</h2>
+				<p>Click on the tabs to read more details about the changes.</p>
 				<br />
 				<br />
-				<translate>
-					Close this menu and click anywhere to join a team and begin playing!
-				</translate>
+				<p>● Human stamina buffed</p>
+				<p>● Marazap changed to require continuous aim.</p>
+				<p>● Tyrant health bumped to 400 and regen bumped.</p>
+				<p>● Tyrant can slash while charging.</p>
+				<p>● Lasgun can zoom.</p>
+				<p>● Granger spit reverted to slowing instead of trapping.</p>
+			</panel>
+			<tab>
+				<img class="emoticon" src="/emoticons/marauder"/>
+				<span>Mara Zap</span>
+			</tab>
+			<panel>
+				<h2>Mara Zap Changes</h2><br/>
+				<p>
+					Previously, marazap dealt all of its damage all at once.
+					Now, marazap will continue to deal damage as long as you
+					aim at your target. If anyone else comes into range when
+					you are zapping someone, they will be zapped too. As soon
+					as you stop aiming at them, the marazap chain will be broken.
+				</p>
+
 			</panel>
 		</tabset>
 	</body>
