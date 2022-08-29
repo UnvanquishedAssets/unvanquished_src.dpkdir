@@ -27,6 +27,11 @@
 				<p>● Lasgun can zoom.</p>
 				<p>● Granger spit reverted to slowing instead of trapping.</p>
 				<p>● Firebomb and Grenade unlock thresholds swapped.</p>
+				<p>● Drills and leeches have increased health and increased build times.</p>
+				<p>● Can only build 3 drills/leeches max.</p>
+				<p>● Can only build drills and leeches if 100% efficiency.</p>
+				<p>● Each drill and leech will give you 100 creds or 1 evo every respawn.</p>
+				<p>● Each drill or leech will give you a momentum floor.</p>
 			</panel>
 			<tab>
 				<img class="emoticon" src="/emoticons/marauder"/>
