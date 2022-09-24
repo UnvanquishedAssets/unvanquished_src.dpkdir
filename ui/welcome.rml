@@ -28,6 +28,7 @@
 				<p>● Lasgun can zoom.</p>
 				<p>● Granger spit reverted to slowing instead of trapping.</p>
 				<p>● Firebomb and Grenade unlock thresholds swapped.</p>
+				<p>● Introduction of the advanced mantis.</p>
 			</panel>
 			<tab>
 				<img class="emoticon" src="/emoticons/marauder"/>
@@ -40,7 +41,14 @@
 					it will also zap the nearest 4 buildings in range. The fact that this did not happen
 					was a bug in Unvanquished.
 				</p>
-
+			</panel>
+			<panel>
+				<h2>Advanced Mantis</h2><br/>
+				<p>
+					The Advanced Mantis is like the mantis except that every human structure that it attacks
+					starts to corrode. Humans need to heal it for some period of time before the corrosion
+					stops. Also every time it dies, it will corrode all near by human buildings.
+				</p>
 			</panel>
 		</tabset>
 	</body>
