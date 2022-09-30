@@ -17,7 +17,7 @@
 				<h3><translate>Team</translate></h3>
 			</row>
 			<row>
-				<input type="text" class="text" style="width: 12em;" name="amount"/>
+				<input type="text" class="text" style="width: 12em;" name="amount" value="4"/>
 				<h3><translate>Amount</translate></h3>
 			</row>
 			<input type="submit"><button><translate>Call vote</translate></button></input>
