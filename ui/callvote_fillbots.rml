@@ -10,9 +10,9 @@
 		<form onsubmit='Events.pushevent("execForm \"callvote $action$ $amount$\"; hide", event)'>
 			<row>
 				<select name="action">
-					<option value="fillbots">both teams</option>
-					<option value="fillbots_aliens">aliens</option>
-					<option value="fillbots_humans">humans</option>
+					<option value="fillbots">Both teams</option>
+					<option value="fillbots_aliens">Aliens</option>
+					<option value="fillbots_humans">Humans</option>
 				</select>
 				<h3><translate>Team</translate></h3>
 			</row>
