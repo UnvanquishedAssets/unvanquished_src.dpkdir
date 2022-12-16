@@ -18,11 +18,7 @@ selector
 				action heal
 			}
 
-			fallback
-			{
-				action roamInRadius( E_H_REACTOR, 500 )
-				action roam
-			}
+			action roamInRadius( E_H_REACTOR, 500 )
 		}
 	}
 
@@ -38,11 +34,9 @@ selector
 			{
 				action evolve
 			}
-			fallback
-			{
-				action roamInRadius( E_A_OVERMIND, 500 )
-				action roam
-			}
+			action roamInRadius( E_A_OVERMIND, 500 )
 		}
 	}
+
+	action roam
 }
