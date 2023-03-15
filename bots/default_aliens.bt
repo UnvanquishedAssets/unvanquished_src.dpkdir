@@ -24,7 +24,14 @@ selector
 					{
 						condition ( healScore > 0.5 && percentHealth( E_GOAL ) > 0.3  && random > 0.3 )
 						condition baseRushScore < 0.75
-						action heal
+						selector
+						{
+							action changeGoal( E_A_BOOSTER )
+							action changeGoal( E_A_OVERMIND )
+							action changeGoal( E_A_SPAWN )
+						}
+						action resetStuckTime
+						action moveToGoal
 					}
 				}
 			}
@@ -33,12 +40,24 @@ selector
 		}
 	}
 
-	selector
+	condition ( healScore > 0.25 )
 	{
 		sequence
 		{
-			condition healScore > 0.25
-			action heal
+			sequence
+			{
+				selector
+				{
+					action changeGoal( E_A_BOOSTER )
+					action changeGoal( E_A_OVERMIND )
+					action changeGoal( E_A_SPAWN )
+				}
+				action moveToGoal
+				condition distanceTo( E_GOAL ) < 5
+				{
+					action resetStuckTime
+				}
+			}
 		}
 	}
 

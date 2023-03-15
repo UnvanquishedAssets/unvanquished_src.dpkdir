@@ -34,17 +34,16 @@ selector
 						action fight
 					}
 
-					sequence
+					decorator timer( 3000 )
 					{
-						condition ( healScore > 0.5 && percentHealth( E_GOAL ) > 0.3  && random > 0.3 )
-						condition baseRushScore < 0.75
-						selector
+						sequence
 						{
-							decorator timer( 3000 )
-							{
-								action heal
-							}
-							action roamInRadius( E_H_MEDISTAT, 250 )
+							condition ( healScore > 0.5 && percentHealth( E_GOAL ) > 0.3 && random > 0.3 )
+							condition ( baseRushScore < 0.75 )
+							condition ( distanceTo( E_GOAL ) > 5 )
+							action changeGoal( E_H_MEDISTAT )
+							action resetStuckTime
+							action moveToGoal
 						}
 					}
 				}
@@ -66,19 +65,20 @@ selector
 		}
 	}
 
-	selector
+	condition ( healScore > 0.25 )
 	{
-		sequence
+		selector
 		{
-			condition healScore > 0.25
-			selector
+			decorator timer( 3000 )
 			{
-				decorator timer( 3000 )
+				sequence
 				{
-					action heal
+					action changeGoal( E_H_MEDISTAT )
+					action resetStuckTime
+					action moveToGoal
 				}
-				action roamInRadius( E_H_MEDISTAT, 250 )
 			}
+			action roamInRadius( E_H_MEDISTAT, 250 )
 		}
 	}
 
