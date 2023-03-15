@@ -1,0 +1,29 @@
+sequence
+{
+	selector
+	{
+		condition ( team == TEAM_ALIENS )
+		{
+			selector
+			{
+				action changeGoal( E_A_BOOSTER )
+				action changeGoal( E_A_OVERMIND )
+				action changeGoal( E_A_SPAWN )
+			}
+		}
+
+		condition ( team == TEAM_HUMANS )
+		{
+			action changeGoal( E_H_MEDISTAT )
+		}
+	}
+
+	selector
+	{
+		condition ( distanceTo( E_GOAL ) < 5 )
+		{
+			action resetStuckTime
+		}
+		action moveToGoal
+	}
+}

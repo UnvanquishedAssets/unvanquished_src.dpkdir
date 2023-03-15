@@ -36,14 +36,9 @@ selector
 
 					decorator timer( 3000 )
 					{
-						sequence
+						condition healScore > 0.5 && percentHealth( E_GOAL ) > 0.3 && baseRushScore < 0.75 && random > 0.3
 						{
-							condition ( healScore > 0.5 && percentHealth( E_GOAL ) > 0.3 && random > 0.3 )
-							condition ( baseRushScore < 0.75 )
-							condition ( distanceTo( E_GOAL ) > 5 )
-							action changeGoal( E_H_MEDISTAT )
-							action resetStuckTime
-							action moveToGoal
+							behavior heal
 						}
 					}
 				}
@@ -71,12 +66,7 @@ selector
 		{
 			decorator timer( 3000 )
 			{
-				sequence
-				{
-					action changeGoal( E_H_MEDISTAT )
-					action resetStuckTime
-					action moveToGoal
-				}
+				behavior heal
 			}
 			action roamInRadius( E_H_MEDISTAT, 250 )
 		}
