@@ -1,0 +1,28 @@
+sequence
+{
+	selector
+	{
+		condition ( team == TEAM_ALIENS )
+		{
+			selector
+			{
+				action changeGoal( E_H_SPAWN )
+				action changeGoal( E_H_ARMOURY )
+				action changeGoal( E_H_MEDISTAT )
+				action changeGoal( E_H_REACTOR )
+			}
+		}
+
+		condition ( team == TEAM_HUMANS )
+		{
+			selector
+			{
+				action changeGoal( E_A_BOOSTER )
+				action changeGoal( E_A_SPAWN )
+				action changeGoal( E_A_OVERMIND )
+			}
+		}
+	}
+
+	action moveToGoal
+}

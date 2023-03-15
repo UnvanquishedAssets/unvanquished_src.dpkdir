@@ -104,7 +104,7 @@ selector
 
 	condition baseRushScore > 0.5
 	{
-		action rush
+		behavior rush
 	}
 
 	action roam
