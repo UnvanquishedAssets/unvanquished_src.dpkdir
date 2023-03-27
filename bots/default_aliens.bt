@@ -38,13 +38,9 @@ selector
 		action moveto( E_A_BOOSTER )
 	}
 
-	selector
+	condition healScore > 0.25
 	{
-		sequence
-		{
-			condition healScore > 0.25
-			action heal
-		}
+		action heal
 	}
 
 	condition baseRushScore > 0.5
