@@ -33,6 +33,11 @@ selector
 		}
 	}
 
+	condition resupplyScore > 0.95
+	{
+		action moveto( E_A_BOOSTER )
+	}
+
 	selector
 	{
 		sequence
