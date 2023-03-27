@@ -110,6 +110,11 @@ selector
 		}
 	}
 
+	condition resupplyScore > 0.80
+	{
+		action moveto( E_H_ARMOURY )
+	}
+
 	action equip
 
 	condition baseRushScore > 0.5
