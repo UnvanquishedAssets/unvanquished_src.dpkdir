@@ -27,27 +27,43 @@ selector
 	{
 		selector
 		{
-			condition(stuckTime > 20000)
+			condition(stuckTime > 15000)
 			{
 				action suicide
 			}
 
-			decorator timer(3000)
+			decorator timer(1000)
 			{
 				decorator return(STATUS_FAILURE)
 				{
 					action jump
 				}
 			}
-			condition(stuckTime > 17500)
+			condition(stuckTime > 14000)
 			{
 				action moveInDir(MOVE_FORWARD)
 			}
-			condition(stuckTime > 15000)
+			condition(stuckTime > 13000)
 			{
 				action moveInDir(MOVE_RIGHT)
 			}
-			condition(stuckTime > 12500)
+			condition(stuckTime > 12000)
+			{
+				action moveInDir(MOVE_BACKWARD)
+			}
+			condition(stuckTime > 11000)
+			{
+				action moveInDir(MOVE_LEFT)
+			}
+			condition(stuckTime > 10000)
+			{
+				action moveInDir(MOVE_FORWARD)
+			}
+			condition(stuckTime > 9000)
+			{
+				action moveInDir(MOVE_RIGHT)
+			}
+			condition(stuckTime > 8000)
 			{
 				action moveInDir(MOVE_BACKWARD)
 			}
