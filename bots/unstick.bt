@@ -1,13 +1,83 @@
 // Subroutine to try to prevent bots from getting stuck
-selector
-{
-	decorator return( STATUS_FAILURE )
-	{
-		// protect bots that are repairing from being considered stuck
-		sequence
-		{
+// There is 2 parts, one from 3 to 5 seconds, and the second part to 7 to 15 seconds.
+// Still WIP
+// In thhe first part, the bot will try shorter movements to unstick, and, also try to go around after some steps. In many times this is enought to unstick.
+// In the check around sequence, if there is enemy nearby, to bot will try to defend hiself. If around is quiet, the bot will try to unstick again. If, after long time without success, the bot will suicide.
+selector {
+	decorator return( STATUS_FAILURE ) {
+		// protect bots that are repairing from being considered stuck - May be should add the same for healing
+		sequence {
 			condition haveWeapon( WP_HBUILD ) && distanceTo( E_GOAL ) <= 100 && percentHealth( E_GOAL ) < 1.0
-			action resetStuckTime
+				action resetStuckTime
+		}
+	}
+
+			
+	condition(stuckTime > 7000) 	{
+		selector {
+			condition(stuckTime > 15000) {
+				action suicide
+			}
+			
+			decorator timer(3000) {
+				decorator return(STATUS_FAILURE) {
+					selector {
+						condition  distanceTo( E_ENEMY ) <= 300 {
+							sequence {
+								action resetStuckTime
+								action fight
+							}
+						}
+						action jump
+					}
+				}
+			}
+			
+			decorator timer(300) {
+				decorator return(STATUS_FAILURE) {
+					condition distanceTo( E_ENEMY ) <= 300 {
+						sequence {
+							action resetStuckTime
+							action fight
+						}
+					}
+				}
+			}
+
+			condition(stuckTime > 12700) {
+				// I would like a test with 100, but keep simple for the moment
+				behavior unstickcheckaround
+			}
+			condition(stuckTime > 12500) {
+				action moveInDir(MOVE_FORWARD)
+			}
+			condition(stuckTime > 10000) {
+				action moveInDir(MOVE_RIGHT)
+			}
+			condition(stuckTime > 9500) {
+				action moveInDir(MOVE_BACKWARD)
+			}
+			condition(stuckTime > 8500) {
+				// I would like a test with 200, but keep simple for the moment
+				behavior unstickcheckaround
+			}
+			condition(stuckTime > 8300) {
+				action moveInDir(MOVE_LEFT)
+			}	
+			condition(stuckTime > 8100) {
+					action moveInDir(MOVE_FORWARD)
+			}			
+			condition(stuckTime > 7900) {
+				action moveInDir(MOVE_LEFT)
+			}
+			condition(stuckTime > 7700) {
+				action moveInDir(MOVE_BACKWARD)
+			}
+			condition(stuckTime > 7500) {
+				action moveInDir(MOVE_RIGHT)
+			}
+			// I would like a test with 400 and the shorter test, but keep simple for the moment
+			behavior unstickcheckaround
 		}
 	}
 
@@ -23,38 +93,85 @@ selector
 	}
 
 
-	condition(stuckTime > 10000)
-	{
-		selector
-		{
-			condition(stuckTime > 20000)
-			{
-				action suicide
+	// This is the quick unstuck start at 3 seconds to 5 seconds, without suicide
+	condition(stuckTime > 3000) {
+		selector {
+			condition(stuckTime > 6500) {
+				// I would like a test with 300 and the shorter test, but keep simple for the moment
+				behavior unstickcheckaround
 			}
-
-			decorator timer(3000)
-			{
-				decorator return(STATUS_FAILURE)
-				{
+			
+			// Not same values, shorter timer
+			decorator timer(1500) {
+				decorator return(STATUS_FAILURE) {
 					action jump
 				}
 			}
-			condition(stuckTime > 17500)
-			{
+			
+			
+			decorator timer(300) {
+				decorator return(STATUS_FAILURE) {
+					condition distanceTo( E_ENEMY ) <= 300 {
+						sequence {
+							action resetStuckTime
+							action fight
+						}
+					}
+				}
+			}
+		// Short steps tring to unstick
+		
+			condition(stuckTime > 6300) {
 				action moveInDir(MOVE_FORWARD)
 			}
-			condition(stuckTime > 15000)
-			{
-				action moveInDir(MOVE_RIGHT)
+			condition(stuckTime > 6100) {
+				action moveInDir(MOVE_LEFT)
 			}
-			condition(stuckTime > 12500)
-			{
+			condition(stuckTime > 5900) {
+				action moveInDir(MOVE_LEFT)
+			}
+			condition(stuckTime > 5700) {
+				// I would like a test with 200 and the shorter test, but keep simple for the moment
+				behavior unstickcheckaround
+			}
+			condition(stuckTime > 5300) {
 				action moveInDir(MOVE_BACKWARD)
 			}
-			sequence
-			{
+			condition(stuckTime > 5100) {
+				action moveInDir(MOVE_FORWARD)
+			}
+			condition(stuckTime > 4900) {
 				action moveInDir(MOVE_LEFT)
-				action moveTo(E_SELF) // cancel old target which may be causing the bot to walk into a wall, etc.
+			}
+			condition(stuckTime > 4700) {
+				action moveInDir(MOVE_FORWARD)
+			}
+			condition(stuckTime > 4500) {
+				action moveInDir(MOVE_LEFT)
+			}
+			condition(stuckTime > 4300) {
+				action moveInDir(MOVE_BACKWARD)
+			}
+			condition(stuckTime > 4100) {
+				action moveInDir(MOVE_LEFT)
+			}
+			condition(stuckTime > 3900) {
+				action moveInDir(MOVE_FORWARD)
+			}			
+			condition(stuckTime > 3700) {
+				behavior unstickcheckaround
+			}
+			condition(stuckTime > 3500) {
+				action moveInDir(MOVE_FORWARD)
+			}
+			condition(stuckTime > 3300) {
+				action moveInDir(MOVE_RIGHT)
+			}
+			condition(stuckTime > 3100) {
+				action moveInDir(MOVE_BACKWARD)
+			}
+			// I would like a test with 200 and the shorter test, but keep simple for the moment
+			behavior unstickcheckaround
 			}
 		}
 	}
